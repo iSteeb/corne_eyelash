@@ -44,8 +44,8 @@ layers:
   - $$mdi:keyboard-esc$$
   - LGUI
   - NUMBER
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - SYMBOL
   - $$mdi:apple-keyboard-option$$
   NUMBER:
