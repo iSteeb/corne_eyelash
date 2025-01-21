@@ -34,7 +34,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:keyboard-space$$
+  - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
   - N
   - M
@@ -76,7 +76,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - PG UP
+  - F12
   - $$mdi:apple-keyboard-shift$$
   - F1
   - F2
@@ -149,12 +149,12 @@ layers:
   CRTL:
   - $$mdi:power-standby$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - F2
-  - F3
-  - F4
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - SLEEP
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - F6
+  - PLAY PAUSE
   - $$mdi:skip-next$$
   - PREVIOUS
   - {t: '$$mdi:transfer$$', type: trans}
@@ -172,19 +172,19 @@ layers:
   - $$mdi:progress-download$$
   - $$mdi:volume-high$$
   - $$mdi:volume-low$$
-  - SHUFFLE
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB ON
+  - RGB OFF
+  - RGB BRI
+  - RGB BRD
+  - RGB EFF
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:brightness-5$$
+  - BRI INC
   - $$mdi:brightness-7$$
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
