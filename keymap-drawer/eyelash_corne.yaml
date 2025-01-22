@@ -153,7 +153,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - SLEEP
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - RGB HUI
   - PLAY PAUSE
   - $$mdi:skip-next$$
   - PREVIOUS
@@ -166,15 +166,15 @@ layers:
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - RGB SAD
   - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - $$mdi:progress-download$$
+  - RGB SAI
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-high$$
   - $$mdi:volume-low$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - $$mdi:apple-keyboard-shift$$
   - RGB ON
   - RGB OFF
@@ -182,13 +182,13 @@ layers:
   - RGB BRD
   - RGB EFF
   - $$mdi:volume-off$$
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB HUD
+  - {t: '$$mdi:transfer$$', type: trans}
   - BRI INC
   - $$mdi:brightness-7$$
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:progress-download$$
   - LGUI
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:keyboard-space$$
