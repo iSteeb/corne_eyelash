@@ -92,9 +92,9 @@ layers:
   - F10
   - F11
   - $$mdi:apple-keyboard-command$$
-  - {type: held}
+  - {t: NUMBER, type: held}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - RMETA
   - CRTL
   - $$mdi:apple-keyboard-option$$
   SYMBOL:
@@ -144,7 +144,7 @@ layers:
   - CRTL
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {type: held}
+  - {t: SYMBOL, type: held}
   - $$mdi:apple-keyboard-option$$
   CRTL:
   - $$mdi:power-standby$$
