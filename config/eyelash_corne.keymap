@@ -68,7 +68,7 @@
 &kp TAB    &kp N1  &kp N2  &kp N3        &kp N4  &kp N5                                   &mmv MOVE_UP                     &kp N6          &kp N7    &kp N8    &kp N9     &kp N0   &kp BSPC
 &kp LCTRL  &trans  &trans  &trans        &trans  &trans                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT_ARROW  &kp DOWN  &kp UP    &kp RIGHT  &trans   &kp F12
 &kp LSHFT  &kp F1  &kp F2  &kp F3        &kp F4  &kp F5     &kp C_MUTE                    &mmv MOVE_DOWN                   &kp F6          &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
-                           &kp LEFT_GUI  &trans  &kp SPACE                                                                 &kp RET         &mo 3     &kp RALT
+                           &kp LEFT_GUI  &mo 1   &kp SPACE                                                                 &kp RMETA       &mo 3     &kp RALT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -80,7 +80,7 @@
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &trans    &trans  &trans    &trans    &trans               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &kp CAPS  &trans  &none     &trans    &trans     &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &mo 3     &kp SPACE                                                             &kp RET    &trans     &kp RALT
+                             &kp LGUI  &mo 3     &kp SPACE                                                             &kp RET    &mo 2      &kp RALT
             >;
 
             sensor-bindings = <&scroll_encoder>;
