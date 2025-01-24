@@ -155,8 +155,8 @@ layers:
   - SLEEP
   - RGB HUI
   - PLAY PAUSE
-  - $$mdi:skip-next$$
   - PREVIOUS
+  - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -169,29 +169,29 @@ layers:
   - RGB SAD
   - $$mdi:mouse-left-click-outline$$
   - RGB SAI
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:volume-high$$
+  - $$mdi:volume-off$$
   - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB ON
   - RGB OFF
   - RGB BRI
   - RGB BRD
   - RGB EFF
-  - $$mdi:volume-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB HUD
   - {t: '$$mdi:transfer$$', type: trans}
-  - BRI INC
   - $$mdi:brightness-7$$
+  - $$mdi:brightness-5$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
-  - LGUI
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: CRTL, type: held}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: CRTL, type: held}
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:transfer$$', type: trans}
