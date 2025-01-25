@@ -28,7 +28,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -110,7 +110,7 @@ layers:
   - '*'
   - (
   - )
-  - '~'
+  - \
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -120,26 +120,26 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - _
+  - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '`', s: '~'}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - \
+  - '|'
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '-', s: _}
+  - _
   - +
   - '~'
   - '{'
   - '}'
-  - '|'
+  - '~'
   - LGUI
   - CRTL
   - $$mdi:keyboard-space$$
@@ -195,7 +195,3 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: CRTL, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-combos:
-- p: [23, 24]
-  k: $$mdi:keyboard-esc$$
-  l: [QWERTY]
