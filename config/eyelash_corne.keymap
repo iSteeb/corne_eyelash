@@ -47,16 +47,7 @@
         tap-ms = <30>;
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        esc_kj {
-            bindings = <&kp ESCAPE>;
-            key-positions = <23 24>;
-            timeout-ms = <40>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
