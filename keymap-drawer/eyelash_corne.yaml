@@ -154,7 +154,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - SLEEP
   - RGB HUI
-  - PLAY PAUSE
+  - {t: '$$mdi:transfer$$', type: trans}
   - PREVIOUS
   - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -169,10 +169,10 @@ layers:
   - RGB SAD
   - $$mdi:mouse-left-click-outline$$
   - RGB SAI
-  - $$mdi:volume-off$$
+  - PLAY PAUSE
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
