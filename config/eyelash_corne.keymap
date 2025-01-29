@@ -326,7 +326,7 @@
         };
 
         slash {
-            bindings = <&kp KP_SLASH>;
+            bindings = <&kp LS(N7)>;
             key-positions = <8 22>;
         };
 
