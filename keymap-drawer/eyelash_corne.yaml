@@ -6,7 +6,7 @@ layers:
   - E
   - R
   - T
-  - $$mdi:arrow-up-bold$$
+  - Sft+F10
   - Y
   - U
   - I
@@ -20,7 +20,7 @@ layers:
   - F
   - G
   - $$mdi:arrow-left-bold$$
-  - {t: '4', h: toggle}
+  - $$mdi:keyboard-space$$
   - $$mdi:arrow-right-bold$$
   - H
   - J
@@ -35,7 +35,7 @@ layers:
   - V
   - B
   - {t: '5', h: toggle}
-  - $$mdi:arrow-down-bold$$
+  - Sft+F7
   - N
   - M
   - '&comma_period'
