@@ -198,12 +198,12 @@
 
         at {
             bindings = <&kp RA(Q)>;
-            key-positions = <14 1>;
+            key-positions = <14 5>;
         };
 
         and {
             bindings = <&kp LS(N6)>;
-            key-positions = <16 31>;
+            key-positions = <16 14>;
         };
 
         dollar {
@@ -248,12 +248,12 @@
 
         tilde {
             bindings = <&kp RA(RIGHT_BRACKET)>;
-            key-positions = <36 22>;
+            key-positions = <5 9 25>;
         };
 
         grave {
             bindings = <&kp EQUAL>;
-            key-positions = <22 7>;
+            key-positions = <18 4>;
         };
 
         cmd+tab {
@@ -283,12 +283,12 @@
 
         minus {
             bindings = <&kp KP_MINUS>;
-            key-positions = <10 24>;
+            key-positions = <9 37>;
         };
 
         times {
             bindings = <&kp KP_MULTIPLY>;
-            key-positions = <9 23>;
+            key-positions = <37 8>;
         };
 
         caret {
@@ -327,7 +327,12 @@
 
         slash {
             bindings = <&kp KP_SLASH>;
-            key-positions = <8 22>;
+            key-positions = <9 23 36>;
+        };
+
+        underscore {
+            bindings = <&kp LS(QUESTION)>;
+            key-positions = <8 36>;
         };
     };
 
