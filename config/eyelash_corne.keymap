@@ -298,13 +298,13 @@
 
         pipe {
             bindings = <&kp RA(NON_US_BACKSLASH)>;
-            key-positions = <8 23 37>;
+            key-positions = <7 22>;
             layers = <0>;
         };
 
         backslash {
             bindings = <&kp RA(MINUS)>;
-            key-positions = <38 7 23>;
+            key-positions = <7 23>;
             layers = <0>;
         };
 
@@ -327,7 +327,7 @@
 
         slash {
             bindings = <&kp KP_SLASH>;
-            key-positions = <9 23 36>;
+            key-positions = <8 22>;
         };
 
         underscore {
