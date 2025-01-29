@@ -213,7 +213,7 @@
 
         euro {
             bindings = <&kp RA(E)>;
-            key-positions = <3 4 10>;
+            key-positions = <3 4 8>;
         };
 
         percent {
