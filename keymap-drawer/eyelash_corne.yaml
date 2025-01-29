@@ -296,9 +296,9 @@ layers:
 combos:
 - p: [1, 2]
   k: $$mdi:keyboard-esc$$
-- p: [14, 1]
+- p: [14, 5]
   k: AltGr+Q
-- p: [16, 31]
+- p: [16, 14]
   k: Sft+6
 - p: [10, 25, 16]
   k: Sft+4
@@ -316,9 +316,9 @@ combos:
   k: {t: '[', s: '{'}
 - p: [15, 29]
   k: {t: '-', s: _}
-- p: [36, 22]
+- p: [5, 9, 25]
   k: AltGr+]
-- p: [22, 7]
+- p: [18, 4]
   k: {t: '=', s: +}
 - p: [17, 16, 15]
   k: Gui+$$mdi:keyboard-tab$$
@@ -330,9 +330,9 @@ combos:
   k: {t: 'Gui+$$mdi:backspace$$', type: backspace}
 - p: [11, 25]
   k: KP PLUS
-- p: [10, 24]
+- p: [9, 37]
   k: KP MINUS
-- p: [9, 23]
+- p: [37, 8]
   k: KP MULTIPLY
 - p: [31, 14, 4]
   k: {t: '`', s: '~'}
@@ -350,5 +350,7 @@ combos:
 - p: [8, 7, 9, 23, 37, 36, 38]
   k: AltGr+Sft+7
   l: [NUMBER]
-- p: [8, 22]
+- p: [9, 23, 36]
   k: KP SLASH
+- p: [8, 36]
+  k: Sft+?
