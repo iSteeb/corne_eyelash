@@ -336,10 +336,10 @@ combos:
   k: KP MULTIPLY
 - p: [31, 14, 4]
   k: {t: '`', s: '~'}
-- p: [8, 23, 37]
+- p: [7, 22]
   k: AltGr+\
   l: [QWERTY]
-- p: [38, 7, 23]
+- p: [7, 23]
   k: AltGr+-
   l: [QWERTY]
 - p: [1, 3]
@@ -350,7 +350,7 @@ combos:
 - p: [8, 7, 9, 23, 37, 36, 38]
   k: AltGr+Sft+7
   l: [NUMBER]
-- p: [9, 23, 36]
+- p: [8, 22]
   k: KP SLASH
 - p: [8, 36]
   k: Sft+?
