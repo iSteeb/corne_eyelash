@@ -414,10 +414,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP_ARROW               &kp Y  &kp U      &kp I          &kp O             &kp P                    &trans
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &tog 4          &kp RIGHT  &kp H  &kp J      &kp K          &kp L             &other_punctuation       &trans
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 5              &kp DOWN_ARROW             &kp N  &kp M      &comma_period  &exclam_question  &brackets_dance_opening  &brackets_dance_closing
-                                &kp LGUI  &kp SPACE  &mo 1                                                 &mo 2  &kp ENTER  &kp LEFT_ALT
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp LS(F10)             &kp Y  &kp U      &kp I          &kp O             &kp P                    &trans
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &kp SPACE    &kp RIGHT  &kp H  &kp J      &kp K          &kp L             &other_punctuation       &trans
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 5              &kp LS(F7)              &kp N  &kp M      &comma_period  &exclam_question  &brackets_dance_opening  &brackets_dance_closing
+                                &kp LGUI  &kp SPACE  &mo 1                                              &mo 2  &kp ENTER  &kp LEFT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
