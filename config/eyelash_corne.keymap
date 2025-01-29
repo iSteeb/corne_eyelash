@@ -299,6 +299,78 @@
             layers = <1>;
         };
     };
+    
+    macros {
+        parentheses: parentheses {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8) &kp LS(N9) &kp LEFT>;
+            label = "PARENTHESES";
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N8) &kp RA(N9) &kp LEFT>;
+            label = "BRACKETS";
+        };
+
+        braces: braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N7) &kp RA(N0) &kp LEFT_ARROW>;
+            label = "BRACES";
+        };
+
+        angles: angles {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp LEFT>;
+            label = "ANGLES";
+        };
+
+        brackets_mac: brackets_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N5) &kp RA(N6) &kp LEFT>;
+            label = "BRACKETS_MAC";
+        };
+
+        parentheses_mac: parentheses_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8) &kp LS(N9) &kp LEFT>;
+            label = "PARENTHESES_MAC";
+        };
+
+        braces_mac: braces_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N8) &kp RA(N9) &kp LEFT>;
+            label = "BRACES_MAC";
+        };
+
+        angles_mac: angles_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp LS(GRAVE) &kp LEFT>;
+            label = "ANGLES_MAC";
+        };
+
+        bt_mac: bt_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 1>;
+            label = "BT_MAC";
+        };
+
+        bt_not_mac: bt_not_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "BT_NOT_MAC";
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
