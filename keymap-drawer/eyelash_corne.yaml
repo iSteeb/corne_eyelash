@@ -351,6 +351,6 @@ combos:
   k: AltGr+Sft+7
   l: [NUMBER]
 - p: [8, 22]
-  k: KP SLASH
+  k: Sft+7
 - p: [8, 36]
   k: Sft+?
