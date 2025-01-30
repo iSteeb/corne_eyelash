@@ -414,10 +414,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp LS(F10)             &kp Y  &kp U      &kp I          &kp O             &kp P                    &trans
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &kp SPACE    &kp RIGHT  &kp H  &kp J      &kp K          &kp L             &other_punctuation       &trans
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 5              &kp LS(F7)              &kp N  &kp M      &comma_period  &exclam_question  &brackets_dance_opening  &brackets_dance_closing
-                                &kp LGUI  &kp SPACE  &mo 1                                              &mo 2  &kp ENTER  &kp LEFT_ALT
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP               &kp Y  &kp U      &kp I          &kp O             &kp P                    &trans
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &tog 4    &kp RIGHT  &kp H  &kp J      &kp K          &kp L             &other_punctuation       &trans
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 5              &kp DOWN             &kp N  &kp M      &comma_period  &exclam_question  &brackets_dance_opening  &brackets_dance_closing
+                                &kp LGUI  &kp SPACE  &mo 1                                           &mo 2  &kp ENTER  &kp LEFT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
@@ -426,40 +426,34 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6                             &mmv MOVE_UP                     &kp N7  &kp N8  &kp N9  &trans  &trans  &trans
-&kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans
-&kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans                    &mmv MOVE_DOWN                   &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
+&kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6                             &mmv MOVE_UP                     &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
+&kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans                    &mmv MOVE_DOWN                   &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
                            &trans   &trans   &trans                                                              &trans  &kp N0  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
         };
 
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp ESCAPE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR          &kp RPAR           &kp NON_US_BACKSLASH
-&kp LCTRL   &trans    &trans  &trans    &trans    &trans               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE
-&kp LSHFT   &kp CAPS  &trans  &trans    &trans    &trans     &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp TILDE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
-                              &kp LGUI  &mo 3     &kp SPACE                                                             &kp RET    &mo 2      &kp RALT
+&trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                                             &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
-            display-name = "CRTL";
+        ADJUST_LAYER {
+            display-name = "ADJSUT";
             bindings = <
 &kp C_POWER  &trans          &trans           &trans           &trans           &kp C_SLEEP                                 &rgb_ug RGB_HUI                   &trans            &kp C_PREVIOUS        &kp C_NEXT            &trans      &trans  &trans
 &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4               &rgb_ug RGB_SAD  &mkp LCLK        &rgb_ug RGB_SAI  &kp C_PLAY_PAUSE  &kp C_VOL_DN          &kp C_VOLUME_UP       &kp C_MUTE  &trans  &sys_reset
 &trans       &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF  &trans                     &rgb_ug RGB_HUD                   &trans            &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans      &trans  &bootloader
                                               &trans           &mo 3            &trans                                                                        &trans            &mo 3                 &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_4 {
+        SHORTCUTS {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                        &kp K_COPY               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &kp K_UNDO  &trans       &kp K_REDO  &trans  &trans  &trans  &trans  &trans  &trans
@@ -468,15 +462,15 @@
             >;
         };
 
-        layer_5 {
+        JOSI {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &kp LS(F10)                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &kp LEFT_ARROW  &kp SPACE    &kp RIGHT_ARROW  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &kp LS(F7)                    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                                          &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LA(RIGHT) LA(LEFT)>;
+            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
         };
     };
 
