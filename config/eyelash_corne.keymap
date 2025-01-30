@@ -476,7 +476,7 @@
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LA(DELETE) LA(BACKSPACE)>;
+            sensor-bindings = <&inc_dec_kp LA(RIGHT) LA(LEFT)>;
         };
     };
 
