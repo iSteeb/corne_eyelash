@@ -300,11 +300,11 @@ combos:
   k: AltGr+Q
 - p: [16, 14]
   k: Sft+6
-- p: [10, 25, 16]
+- p: [16, 15]
   k: Sft+4
-- p: [3, 4, 8]
+- p: [3, 16]
   k: AltGr+E
-- p: [3, 4, 11]
+- p: [9, 23, 36]
   k: Sft+5
 - p: [23, 24]
   k: {t: '$$mdi:backspace$$', type: backspace}
@@ -316,7 +316,7 @@ combos:
   k: {t: '[', s: '{'}
 - p: [15, 29]
   k: {t: '-', s: _}
-- p: [5, 9, 25]
+- p: [31, 17, 33]
   k: AltGr+]
 - p: [18, 4]
   k: {t: '=', s: +}
@@ -330,11 +330,11 @@ combos:
   k: {t: 'Gui+$$mdi:backspace$$', type: backspace}
 - p: [11, 25]
   k: KP PLUS
-- p: [9, 37]
+- p: [37, 36]
   k: KP MINUS
 - p: [37, 8]
   k: KP MULTIPLY
-- p: [31, 14, 4]
+- p: [4, 18, 16]
   k: {t: '`', s: '~'}
 - p: [7, 22]
   k: AltGr+\
@@ -352,5 +352,5 @@ combos:
   l: [NUMBER]
 - p: [8, 22]
   k: Sft+7
-- p: [8, 36]
+- p: [32, 33]
   k: Sft+?
