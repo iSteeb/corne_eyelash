@@ -208,17 +208,17 @@
 
         dollar {
             bindings = <&kp LS(N4)>;
-            key-positions = <10 25 16>;
+            key-positions = <16 15>;
         };
 
         euro {
             bindings = <&kp RA(E)>;
-            key-positions = <3 4 8>;
+            key-positions = <3 16>;
         };
 
         percent {
             bindings = <&kp LS(N5)>;
-            key-positions = <3 4 11>;
+            key-positions = <9 23 36>;
         };
 
         backspace {
@@ -248,7 +248,7 @@
 
         tilde {
             bindings = <&kp RA(RIGHT_BRACKET)>;
-            key-positions = <5 9 25>;
+            key-positions = <31 17 33>;
         };
 
         grave {
@@ -283,7 +283,7 @@
 
         minus {
             bindings = <&kp KP_MINUS>;
-            key-positions = <9 37>;
+            key-positions = <37 36>;
         };
 
         times {
@@ -293,7 +293,7 @@
 
         caret {
             bindings = <&kp GRAVE>;
-            key-positions = <31 14 4>;
+            key-positions = <4 18 16>;
         };
 
         pipe {
@@ -332,7 +332,7 @@
 
         underscore {
             bindings = <&kp LS(QUESTION)>;
-            key-positions = <8 36>;
+            key-positions = <32 33>;
         };
     };
 
