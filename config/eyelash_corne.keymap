@@ -39,11 +39,11 @@
             bindings = <&key_repeat>, <&kp>;
         };
 
-        comma_period: comma_period {
+        comma_question: comma_question {
             compatible = "zmk,behavior-tap-dance";
-            label = "COMMA_PERIOD";
+            label = "COMMA_QUESTION";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp COMMA>;
+            bindings = <&kp COMMA>, <&kp QUESTION>;
         };
 
         brackets_dance: brackets_dance {
@@ -76,17 +76,17 @@
             bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
         };
 
-        other_punctuation: other_punctuation {
+        apostrophes: apostrophes {
             compatible = "zmk,behavior-tap-dance";
-            label = "OTHER_PUNCTUATION";
+            label = "APOSTROPHES";
             #binding-cells = <0>;
-            bindings = <&kp LS(BACKSLASH)>, <&kp LS(N2)>, <&kp BACKSLASH>;
+            bindings = <&kp LS(BACKSLASH)>, <&kp LS(N2)>;
         };
 
         slashes_and_other_punctuation: slashes_and_other_punctuation {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASHES_AND_OTHER_PUNCTUATION";
-            bindings = <&slashes>, <&other_punctuation>;
+            bindings = <&slashes>, <&apostrophes>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -108,7 +108,7 @@
         slashes_and_other_mac: slashes_and_other_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASHES_AND_OTHER_MAC";
-            bindings = <&slashes_mac>, <&other_punctuation>;
+            bindings = <&slashes_mac>, <&apostrophes>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -131,11 +131,11 @@
             flavor = "tap-preferred";
         };
 
-        exclam_question: exclam_question {
+        dot_exclam: dot_exclam {
             compatible = "zmk,behavior-tap-dance";
-            label = "EXCLAM_QUESTION";
+            label = "DOT_EXCLAM";
             #binding-cells = <0>;
-            bindings = <&testing_other_punct>, <&kp EXCLAMATION>;
+            bindings = <&kp DOT>, <&kp EXCLAMATION>;
         };
 
         testing_other_punct: testing_other_punct {
@@ -171,6 +171,13 @@
                 <&kp LS(NON_US_BSLH)>;
 
             tapping-term-ms = <300>;
+        };
+
+        hashtag_comment: hashtag_comment {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HASHTAG_COMMENT";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH>, <&kp LG(BACKSLASH)>;
         };
     };
 
@@ -334,6 +341,16 @@
             bindings = <&kp LS(QUESTION)>;
             key-positions = <32 33>;
         };
+
+        semicolon {
+            bindings = <&kp LS(COMMA)>;
+            key-positions = <38 24>;
+        };
+
+        colon {
+            bindings = <&kp LS(DOT)>;
+            key-positions = <25 39>;
+        };
     };
 
     macros {
@@ -414,9 +431,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP               &kp Y  &kp U      &kp I          &kp O             &kp P                    &trans
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &tog 4    &kp RIGHT  &kp H  &kp J      &kp K          &kp L             &other_punctuation       &trans
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 5              &kp DOWN             &kp N  &kp M      &comma_period  &exclam_question  &brackets_dance_opening  &brackets_dance_closing
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP               &kp Y  &kp U      &kp I            &kp O        &kp P                    &trans
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &tog 4    &kp RIGHT  &kp H  &kp J      &kp K            &kp L        &hashtag_comment         &apostrophes
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 5              &kp DOWN             &kp N  &kp M      &comma_question  &dot_exclam  &brackets_dance_opening  &brackets_dance_closing
                                 &kp LGUI  &kp SPACE  &mo 1                                           &mo 2  &kp ENTER  &kp LEFT_ALT
             >;
 
@@ -444,7 +461,7 @@
         };
 
         ADJUST_LAYER {
-            display-name = "ADJSUT";
+            display-name = "ADJUST";
             bindings = <
 &kp C_POWER  &trans          &trans           &trans           &trans           &kp C_SLEEP                                 &rgb_ug RGB_HUI                   &trans            &kp C_PREVIOUS        &kp C_NEXT            &trans      &trans  &trans
 &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4               &rgb_ug RGB_SAD  &mkp LCLK        &rgb_ug RGB_SAI  &kp C_PLAY_PAUSE  &kp C_VOL_DN          &kp C_VOLUME_UP       &kp C_MUTE  &trans  &sys_reset
