@@ -26,8 +26,8 @@ layers:
   - J
   - K
   - L
-  - '&other_punctuation'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&hashtag_comment'
+  - '&apostrophes'
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -38,8 +38,8 @@ layers:
   - $$mdi:arrow-down-bold$$
   - N
   - M
-  - '&comma_period'
-  - '&exclam_question'
+  - '&comma_question'
+  - '&dot_exclam'
   - '&brackets_dance_opening'
   - '&brackets_dance_closing'
   - LGUI
@@ -146,7 +146,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  ADJSUT:
+  ADJUST:
   - $$mdi:power-standby$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -190,10 +190,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - ADJSUT
+  - ADJUST
   - {type: held}
   - {type: held}
-  - ADJSUT
+  - ADJUST
   - {t: '$$mdi:transfer$$', type: trans}
   SHORTCUTS:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -354,3 +354,7 @@ combos:
   k: Sft+7
 - p: [32, 33]
   k: Sft+?
+- p: [38, 24]
+  k: Sft+,
+- p: [25, 39]
+  k: Sft+.
