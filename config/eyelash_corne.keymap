@@ -232,12 +232,12 @@
 
         question {
             bindings = <&kp LS(MINUS)>;
-            key-positions = <1 37>;
+            key-positions = <1 38>;
         };
 
         exclamation {
             bindings = <&kp LS(N1)>;
-            key-positions = <37 3>;
+            key-positions = <3 38>;
         };
     };
 
