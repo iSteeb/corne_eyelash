@@ -180,6 +180,13 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSLASH>, <&kp LG(BACKSLASH)>;
         };
+
+        dot_comma: dot_comma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOT_COMMA";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COMMA>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -201,7 +208,7 @@
 
         escape {
             bindings = <&kp ESC>;
-            key-positions = <1 2>;
+            key-positions = <1 0>;
         };
 
         at {
@@ -345,12 +352,22 @@
 
         semicolon {
             bindings = <&kp LS(COMMA)>;
-            key-positions = <38 24>;
+            key-positions = <38 24 9>;
         };
 
         colon {
             bindings = <&kp LS(DOT)>;
-            key-positions = <25 39>;
+            key-positions = <38 24>;
+        };
+
+        question {
+            bindings = <&kp LS(MINUS)>;
+            key-positions = <1 37>;
+        };
+
+        exclamation {
+            bindings = <&kp LS(N1)>;
+            key-positions = <37 3>;
         };
     };
 
@@ -432,9 +449,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP                     &kp Y  &kp U      &kp I            &kp O        &kp P                    &kp LG(Z)
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H  &kp J      &kp K            &kp L        &hashtag_comment         &apostrophes
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 4              &kp DOWN                   &kp N  &kp M      &comma_question  &dot_exclam  &brackets_dance_opening  &brackets_dance_closing
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP                     &kp Y  &kp U      &kp I         &kp O        &kp P                    &kp LG(Z)
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H  &kp J      &kp K         &kp L        &apostrophes             &hashtag_comment
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 4              &kp DOWN                   &kp N  &kp M      &dot_comma    &dot_exclam  &brackets_dance_opening  &brackets_dance_closing
                                 &kp LGUI  &kp SPACE  &mo 1                                                 &mo 2  &kp ENTER  &kp LEFT_ALT
             >;
 
@@ -444,10 +461,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6                             &mmv MOVE_UP                     &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
-&kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
-&kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans                    &mmv MOVE_DOWN                   &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-                           &trans   &trans   &trans                                                              &trans  &kp N0  &trans
+&kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6                             &mmv MOVE_UP                     &kp COMMA  &kp N7  &kp N8  &kp N9  &trans  &trans
+&kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DOT    &kp N4  &kp N5  &kp N6  &trans  &trans
+&kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans                    &mmv MOVE_DOWN                   &kp N0     &kp N1  &kp N2  &kp N3  &trans  &trans
+                           &trans   &trans   &trans                                                              &trans     &trans  &trans
             >;
         };
 
