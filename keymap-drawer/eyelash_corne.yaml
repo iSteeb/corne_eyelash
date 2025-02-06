@@ -39,7 +39,7 @@ layers:
   - N
   - M
   - '&dot_comma'
-  - '&dot_exclam'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&brackets_dance_opening'
   - '&brackets_dance_closing'
   - LGUI
