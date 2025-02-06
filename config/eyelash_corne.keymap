@@ -236,7 +236,7 @@
         };
 
         exclamation {
-            bindings = <&kp LS(N1)>;
+            bindings = <&kp EXCLAMATION>;
             key-positions = <3 38>;
         };
     };
