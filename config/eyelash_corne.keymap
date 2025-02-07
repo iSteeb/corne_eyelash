@@ -213,11 +213,6 @@
             bindings = <&kp LS(QUESTION)>;
             key-positions = <17 18>;
         };
-
-        comma {
-            bindings = <&kp COMMA>;
-            key-positions = <37 38>;
-        };
     };
 
     keymap {
@@ -237,10 +232,10 @@
 
         DOTS {
             bindings = <
-&trans  &kp LS(MINUS)  &trans         &kp LS(N1)   &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans         &kp LS(COMMA)  &trans       &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans         &trans         &kp LS(DOT)  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                      &trans       &trans  &trans                                    &trans  &trans  &trans
+&trans  &kp LS(MINUS)  &trans         &kp LS(N1)   &trans  &trans                    &trans          &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans         &kp LS(COMMA)  &trans       &trans  &trans            &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans         &trans         &kp LS(DOT)  &trans  &trans  &trans            &trans          &trans  &kp COMMA  &trans  &trans  &trans  &trans
+                                      &trans       &trans  &trans                                    &trans  &trans     &trans
             >;
         };
 
