@@ -28,9 +28,9 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            de_ae { sequence = <A E>; bindings = <&de_ae>; };
-            de_oe { sequence = <O E>; bindings = <&de_oe>; };
-            de_ue { sequence = <U E>; bindings = <&de_ue>; };
+            de_ae { sequence = <A E>; bindings = <&kp O>; };
+            de_oe { sequence = <O E>; bindings = <&kp E>; };
+            de_ue { sequence = <U E>; bindings = <&kp N>; };
         };
 
         brackets_dance_opening: brackets_dance_opening {
