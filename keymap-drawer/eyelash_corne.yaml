@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
+  - '&hashtag_comment'
   - $$mdi:apple-keyboard-control$$
   - A
   - S
@@ -27,7 +27,7 @@ layers:
   - K
   - L
   - {t: Sft+\, s: Sft+2}
-  - '&hashtag_comment'
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -39,15 +39,15 @@ layers:
   - N
   - M
   - {t: ., h: DOTS, s: '>'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - SHORTCUTS
   - '&brackets_dance_opening'
   - '&brackets_dance_closing'
   - LGUI
   - $$mdi:keyboard-space$$
   - NUMBER
-  - SHORTCUTS
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:apple-keyboard-option$$
+  - Ctl+Sft+$$mdi:arrow-right-bold$$
   DOTS:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Sft+-, s: Sft+_}
@@ -186,13 +186,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   ADJUST:
@@ -235,13 +235,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - ADJUST
   - {type: held}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - ADJUST
   - {t: '$$mdi:transfer$$', type: trans}
   JOSI:
