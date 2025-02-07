@@ -25,13 +25,6 @@
 
 / {
     behaviors {
-        apostrophes: apostrophes {
-            compatible = "zmk,behavior-tap-dance";
-            label = "APOSTROPHES";
-            #binding-cells = <0>;
-            bindings = <&kp LS(BACKSLASH)>, <&kp LS(N2)>;
-        };
-
         brackets_dance_opening: brackets_dance_opening {
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKETS_DANCE_OPENING";
@@ -72,6 +65,15 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
+        };
+
+        apostrophes: apostrophes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "APOSTROPHES";
+            bindings = <&kp LS(BACKSLASH)>, <&kp LS(NUMBER_2)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -141,16 +143,6 @@
         grave {
             bindings = <&kp EQUAL>;
             key-positions = <18 4>;
-        };
-
-        cmd+tab {
-            bindings = <&kp LG(TAB)>;
-            key-positions = <17 16 15>;
-        };
-
-        ctrl+tab {
-            bindings = <&kp LC(TAB)>;
-            key-positions = <14 15 16 17>;
         };
 
         opt+bksp {
