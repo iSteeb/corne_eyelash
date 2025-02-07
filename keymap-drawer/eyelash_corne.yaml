@@ -26,7 +26,7 @@ layers:
   - J
   - K
   - L
-  - '&apostrophes'
+  - {t: Sft+\, s: Sft+2}
   - '&hashtag_comment'
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -320,10 +320,6 @@ combos:
   k: AltGr+]
 - p: [18, 4]
   k: {t: '=', s: +}
-- p: [17, 16, 15]
-  k: Gui+$$mdi:keyboard-tab$$
-- p: [14, 15, 16, 17]
-  k: Ctl+$$mdi:keyboard-tab$$
 - p: [23, 24, 25]
   k: {t: 'Alt+$$mdi:backspace$$', type: backspace}
 - p: [23, 24, 25, 26]
