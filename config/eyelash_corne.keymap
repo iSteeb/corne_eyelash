@@ -86,6 +86,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        apostrophes: apostrophes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "APOSTROPHES";
+            bindings = <&kp LS(BACKSLASH)>, <&kp LS(NUMBER_2)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
