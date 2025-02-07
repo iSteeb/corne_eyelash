@@ -326,7 +326,7 @@ combos:
   k: {t: 'Gui+$$mdi:backspace$$', type: backspace}
 - p: [11, 25]
   k: KP PLUS
-- p: [36, 37]
+- p: [23, 22]
   k: KP MINUS
 - p: [37, 8]
   k: KP MULTIPLY
@@ -342,5 +342,5 @@ combos:
   k: KP EQUAL
 - p: [8, 22]
   k: Sft+7
-- p: [32, 33]
+- p: [18, 17]
   k: Sft+?
