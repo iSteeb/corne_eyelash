@@ -234,9 +234,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP                     &kp Y  &kp U      &kp I         &kp O  &kp P                    &kp LG(Z)
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H  &kp J      &kp K         &kp L  &apostrophes             &hashtag_comment
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 5              &kp DOWN                   &kp N  &kp M      &none         &none  &brackets_dance_opening  &brackets_dance_closing
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP                     &kp Y  &kp U      &kp I                         &kp O  &kp P                    &kp LG(Z)
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H  &kp J      &kp K                         &kp L  &apostrophes             &hashtag_comment
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 5              &kp DOWN                   &kp N  &kp M      &hold_tap_mo_kp_simple 1 DOT  &none  &brackets_dance_opening  &brackets_dance_closing
                                 &kp LGUI  &kp SPACE  &mo 2                                                 &mo 3  &kp ENTER  &kp LEFT_ALT
             >;
 
