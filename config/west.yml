@@ -11,8 +11,8 @@ manifest:
       url: https://github.com/a741725193/zmk-new_corne
       revision: main
     - name: zmk
-      remote: urob
-      revision: v0.1 # Set to desired ZMK version.
+      remote: petejohanson
+      revision: feat/pointers-with-input-processors
       import: app/west.yml
     - name: zmk-leader-key
       remote: urob
