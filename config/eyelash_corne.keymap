@@ -31,22 +31,22 @@
 
             bt_imax {
                 sequence = <I M A X>;
-                bindings = <&kp N1>;
+                bindings = <&bt BT_SEL 0>;
             };
 
             bt_linux {
                 sequence = <L I N U X>;
-                bindings = <&volei>;
+                bindings = <&bt BT_SEL 1>;
             };
 
             volei {
                 sequence = <V O L E I>;
-                bindings = <&kp N>;
+                bindings = <&volei>;
             };
 
             iow_email {
                 sequence = <I O W E>;
-                bindings = <&kp N>;
+                bindings = <&iow_email>;
             };
 
             dash {
