@@ -24,6 +24,95 @@
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 / {
+    macros {
+        volei: volei {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(V) &kp O &kp L &kp E &kp I &kp B &kp O &kp L &kp N1 &kp N8 &kp N0 &kp N9 &kp LS(N1)>;
+            label = "VOLEI";
+        };
+
+        iow_email: iow_email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp T &kp E &kp V &kp E &kp N &kp DOT &kp D &kp U &kp Z &kp E &kp V &kp I &kp C &kp H &kp LA(Q) &kp I &kp O &kp KP_MINUS &kp W &kp A &kp R &kp N &kp E &kp M &kp U &kp E &kp N &kp D &kp E &kp DOT &kp D &kp E>;
+            label = "iow_email";
+        };
+    };
+    
+    behaviors {
+        leader: leader {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+
+            bt_imax {
+                sequence = <I M A X>;
+                bindings = <&bt BT_SEL 0>;
+            };
+
+            bt_linux {
+                sequence = <L I N U X>;
+                bindings = <&bt BT_SEL 1>;
+            };
+
+            volei {
+                sequence = <V O L E I>;
+                bindings = <&volei>;
+            };
+
+            iow_email {
+                sequence = <I O W E>;
+                bindings = <&iow_email>;
+            };
+
+            dash {
+                sequence = <D A S H>;
+                bindings = <&kp F19>;
+            };
+        };
+
+        hashtag_comment: hashtag_comment {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HASHTAG_COMMENT";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH>, <&kp LG(BACKSLASH)>;
+        };
+
+        hold_tap_mo_kp_simple: hold_tap_mo_kp_simple {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_MO_KP_SIMPLE";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        apostrophes: apostrophes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "APOSTROPHES";
+            bindings = <&kp LS(BACKSLASH)>, <&kp LS(NUMBER_2)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        hold_tap_kp_leader_desktop: hold_tap_kp_leader_desktop {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_KP_LEADER_DESKTOP";
+            bindings = <&kp>, <&leader_desktop>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        leader_desktop: leader_desktop {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LEADER_DESKTOP";
+            #binding-cells = <0>;
+            bindings = <&leader>, <&kp F11>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -147,95 +236,6 @@
         underscore {
             bindings = <&kp LS(QUESTION)>;
             key-positions = <18 17>;
-        };
-    };
-
-    macros {
-        volei: volei {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(V) &kp O &kp L &kp E &kp I &kp B &kp O &kp L &kp N1 &kp N8 &kp N0 &kp N9 &kp LS(N1)>;
-            label = "VOLEI";
-        };
-
-        iow_email: iow_email {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp S &kp T &kp E &kp V &kp E &kp N &kp DOT &kp D &kp U &kp Z &kp E &kp V &kp I &kp C &kp H &kp LA(Q) &kp I &kp O &kp KP_MINUS &kp W &kp A &kp R &kp N &kp E &kp M &kp U &kp E &kp N &kp D &kp E &kp DOT &kp D &kp E>;
-            label = "iow_email";
-        };
-    };
-
-    behaviors {
-        leader: leader {
-            compatible = "zmk,behavior-leader-key";
-            #binding-cells = <0>;
-
-            bt_imax {
-                sequence = <I M A X>;
-                bindings = <&bt BT_SEL 0>;
-            };
-
-            bt_linux {
-                sequence = <L I N U X>;
-                bindings = <&bt BT_SEL 1>;
-            };
-
-            volei {
-                sequence = <V O L E I>;
-                bindings = <&volei>;
-            };
-
-            iow_email {
-                sequence = <I O W E>;
-                bindings = <&iow_email>;
-            };
-
-            dash {
-                sequence = <D A S H>;
-                bindings = <&kp F19>;
-            };
-        };
-
-        hashtag_comment: hashtag_comment {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HASHTAG_COMMENT";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSLASH>, <&kp LG(BACKSLASH)>;
-        };
-
-        hold_tap_mo_kp_simple: hold_tap_mo_kp_simple {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_MO_KP_SIMPLE";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        apostrophes: apostrophes {
-            compatible = "zmk,behavior-mod-morph";
-            label = "APOSTROPHES";
-            bindings = <&kp LS(BACKSLASH)>, <&kp LS(NUMBER_2)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        hold_tap_kp_leader_desktop: hold_tap_kp_leader_desktop {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_KP_LEADER_DESKTOP";
-            bindings = <&kp>, <&leader_desktop>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        leader_desktop: leader_desktop {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LEADER_DESKTOP";
-            #binding-cells = <0>;
-            bindings = <&leader>, <&kp F11>;
         };
     };
 
