@@ -29,19 +29,29 @@
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
 
-            de_ae {
-                sequence = <A E>;
+            bt_imax {
+                sequence = <I M A X>;
                 bindings = <&kp O>;
             };
 
-            de_oe {
-                sequence = <O E>;
+            bt_linux {
+                sequence = <L I N U X>;
                 bindings = <&kp E>;
             };
 
-            de_ue {
-                sequence = <U E>;
+            volei {
+                sequence = <V O L E I>;
                 bindings = <&kp N>;
+            };
+
+            iow_email {
+                sequence = <I O W E>;
+                bindings = <&kp N>;
+            };
+
+            dash {
+                sequence = <D A S H>;
+                bindings = <&kp F19>;
             };
         };
 
