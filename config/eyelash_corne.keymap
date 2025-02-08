@@ -31,12 +31,12 @@
 
             bt_imax {
                 sequence = <I M A X>;
-                bindings = <&kp O>;
+                bindings = <&bt BT_SEL 0>;
             };
 
             bt_linux {
                 sequence = <L I N U X>;
-                bindings = <&kp E>;
+                bindings = <&bt BT_SEL 1>;
             };
 
             volei {
