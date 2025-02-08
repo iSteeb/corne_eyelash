@@ -28,6 +28,7 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
+            init-priority = <9>;
 
             bt_imax {
                 sequence = <I M A X>;
