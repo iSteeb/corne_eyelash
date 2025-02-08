@@ -231,11 +231,11 @@
             label = "VOLEI";
         };
 
-        iow_email: sdati {
+        iow_email: iow_email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp S &kp T &kp E &kp V &kp E &kp N &kp DOT &kp D &kp U &kp Z &kp E &kp V &kp I &kp C &kp H &kp LA(Q) &kp I &kp O &kp KP_MINUS &kp W &kp A &kp R &kp N &kp E &kp M &kp U &kp E &kp N &kp D &kp E &kp DOT &kp D &kp E>;
-            label = "SDATI";
+            label = "iow_email";
         };
     };
 
