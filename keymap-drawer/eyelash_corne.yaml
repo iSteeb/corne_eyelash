@@ -40,8 +40,8 @@ layers:
   - M
   - {t: ., h: DOTS, s: '>'}
   - SHORTCUTS
-  - {t: Sft+8, h: OPEN_BRACKETS, s: Sft+*}
-  - {t: Sft+9, h: CLOSE_BRACKETS, s: Sft+(}
+  - {t: Sft+8, h: OPEN, s: Sft+*}
+  - {t: Sft+9, h: CLOSE, s: Sft+(}
   - LGUI
   - $$mdi:keyboard-space$$
   - NUMBER
@@ -97,7 +97,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  OPEN_BRACKETS:
+  OPEN:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -146,7 +146,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  CLOSE_BRACKETS:
+  CLOSE:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -202,7 +202,7 @@ layers:
   - F4
   - F5
   - F6
-  - U
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
@@ -215,9 +215,9 @@ layers:
   - F10
   - F11
   - F12
-  - L
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
-  - R
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
@@ -231,7 +231,7 @@ layers:
   - F17
   - F18
   - {t: '$$mdi:transfer$$', type: trans}
-  - D
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
