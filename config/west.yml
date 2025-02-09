@@ -6,7 +6,7 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: urob
       url-base: https://github.com/urob
-      - name: zephyrproject-rtos
+    - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
   projects:
     - name: eyelash_corne
