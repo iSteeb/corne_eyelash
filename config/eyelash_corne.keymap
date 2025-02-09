@@ -35,12 +35,12 @@
             };
 
             bt_linux {
-                sequence = <L I N U X>;
+                sequence = <L I N U>;
                 bindings = <&bt BT_SEL 1>;
             };
 
             volei {
-                sequence = <V O L E I>;
+                sequence = <V O L E>;
                 bindings = <&volei>;
             };
 
