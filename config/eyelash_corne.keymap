@@ -53,6 +53,11 @@
                 sequence = <D A S H>;
                 bindings = <&kp F19>;
             };
+
+            desk {
+                sequence = <D E S K>;
+                bindings = <&kp F11>;
+            };
         };
 
         hashtag_comment: hashtag_comment {
