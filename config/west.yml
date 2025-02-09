@@ -2,18 +2,47 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
     - name: urob
       url-base: https://github.com/urob
+      - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
   projects:
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
       revision: main
     - name: zmk
-      remote: urob
-      revision: v0.1 # Set to desired ZMK version.
+      remote: petejohanson
+      revision: feat/pointers-with-input-processors
       import: app/west.yml
     - name: zmk-leader-key
       remote: urob
       revision: v0.1 # Set to same version as ZMK.
+    - name: zephyr
+      remote: urob
+      revision: v3.5.0+zmk-fixes
+      clone-depth: 1
+      import:
+        path-prefix: modules/zephyr
+        name-blocklist:
+          - ci-tools
+          - hal_altera
+          - hal_cypress
+          - hal_infineon
+          - hal_microchip
+          - hal_nxp
+          - hal_openisa
+          - hal_silabs
+          - hal_xtensa
+          - hal_st
+          - hal_ti
+          - loramac-node
+          - mcuboot
+          - mcumgr
+          - net-tools
+          - openthread
+          - edtt
+          - trusted-firmware-m
   self:
     path: config
