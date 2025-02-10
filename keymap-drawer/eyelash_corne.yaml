@@ -45,7 +45,7 @@ layers:
   - LGUI
   - $$mdi:keyboard-space$$
   - NUMBER
-  - '&leader'
+  - {t: '&leader', h: F20}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - Ctl+Sft+$$mdi:arrow-right-bold$$
   DOTS:
