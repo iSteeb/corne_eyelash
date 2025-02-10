@@ -85,13 +85,20 @@
             mods = <(MOD_LSFT)>;
         };
 
-        hold_tap_kp_leader: hold_tap_kp_leader {
+        hold_tap_kp_leader_show_desktop: hold_tap_kp_leader_show_desktop {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_KP_LEADER";
-            bindings = <&kp>, <&leader>;
+            label = "HOLD_TAP_KP_LEADER_SHOW_DESKTOP";
+            bindings = <&kp>, <&leader_show_desktop>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
+        };
+
+        leader_show_desktop: leader_show_desktop {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LEADER_SHOW_DESKTOP";
+            #binding-cells = <0>;
+            bindings = <&leader>, <&kp F11>;
         };
     };
 
@@ -243,10 +250,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP                     &kp Y                      &kp U      &kp I                         &kp O  &kp P                            &hashtag_comment
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H                      &kp J      &kp K                         &kp L  &apostrophes                     &kp LEFT_ALT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 7              &kp DOWN                   &kp N                      &kp M      &hold_tap_mo_kp_simple 1 DOT  &mo 5  &hold_tap_mo_kp_simple 2 LS(N8)  &hold_tap_mo_kp_simple 3 LS(N9)
-                                &kp LGUI  &kp SPACE  &mo 4                                                 &hold_tap_kp_leader F20 0  &kp ENTER  &kp LC(LS(RIGHT))
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp UP                     &kp Y                                   &kp U      &kp I                         &kp O  &kp P                            &hashtag_comment
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G            &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H                                   &kp J      &kp K                         &kp L  &apostrophes                     &kp LEFT_ALT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B  &tog 7              &kp DOWN                   &kp N                                   &kp M      &hold_tap_mo_kp_simple 1 DOT  &mo 5  &hold_tap_mo_kp_simple 2 LS(N8)  &hold_tap_mo_kp_simple 3 LS(N9)
+                                &kp LGUI  &kp SPACE  &mo 4                                                 &hold_tap_kp_leader_show_desktop F20 0  &kp ENTER  &kp LC(LS(RIGHT))
             >;
 
             sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
