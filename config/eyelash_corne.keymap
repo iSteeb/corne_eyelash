@@ -265,8 +265,8 @@
         open_brackets {
             display-name = "OPEN";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans           &kp LA(N7)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &kp NON_US_BSLH  &kp LA(N8)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans           &kp RA(N7)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &kp NON_US_BSLH  &kp RA(N8)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans           &trans      &trans
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
@@ -275,8 +275,8 @@
         close_brackets {
             display-name = "CLOSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans               &kp LA(N0)
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(NON_US_BSLH)  &kp LA(N9)
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans               &kp RA(N0)
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(NON_US_BSLH)  &kp RA(N9)
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans               &trans
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
