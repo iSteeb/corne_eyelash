@@ -171,7 +171,7 @@
 
         minus {
             bindings = <&kp KP_MINUS>;
-            key-positions = <23 22>;
+            key-positions = <37 36>;
         };
 
         times {
@@ -208,7 +208,7 @@
 
         underscore {
             bindings = <&kp LS(QUESTION)>;
-            key-positions = <18 17>;
+            key-positions = <32 33>;
         };
     };
 
