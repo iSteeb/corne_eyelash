@@ -216,14 +216,14 @@
         volei: volei {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(V) &kp O &kp L &kp E &kp I &kp B &kp O &kp L &kp N1 &kp N8 &kp N0 &kp N9 &kp LS(N1)>;
+            bindings = <&kp LS(V) &kp O &kp L &kp E &kp I &kp B &kp O &kp L &kp N1 &kp N8 &kp N0 &kp N9 &kp LS(N1) &none>;
             label = "VOLEI";
         };
 
         iow_email: iow_email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp T &kp E &kp V &kp E &kp N &kp DOT &kp D &kp U &kp Z &kp E &kp V &kp I &kp C &kp H &kp LA(Q) &kp I &kp O &kp KP_MINUS &kp W &kp A &kp R &kp N &kp E &kp M &kp U &kp E &kp N &kp D &kp E &kp DOT &kp D &kp E>;
+            bindings = <&kp S &kp T &kp E &kp V &kp E &kp N &kp DOT &kp D &kp U &kp Z &kp E &kp V &kp I &kp C &kp H &kp RA(Q) &kp I &kp O &kp KP_MINUS &kp W &kp A &kp R &kp N &kp E &kp M &kp U &kp E &kp N &kp D &kp E &kp DOT &kp D &kp E &none>;
             label = "iow_email";
         };
     };
