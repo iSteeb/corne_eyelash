@@ -262,10 +262,10 @@
         dots {
             display-name = "DOTS";
             bindings = <
-&trans  &kp LS(MINUS)  &trans         &kp LS(N1)   &trans  &trans                    &trans          &trans  &trans     &trans  &trans  &trans  &trans
-&trans  &trans         &kp LS(COMMA)  &trans       &trans  &trans            &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
-&trans  &trans         &trans         &kp LS(DOT)  &trans  &trans  &trans            &trans          &trans  &kp COMMA  &trans  &trans  &trans  &trans
-                                      &trans       &trans  &trans                                    &trans  &trans     &trans
+&trans  &kp LS(MINUS)  &trans         &kp LS(N1)   &trans  &trans                    &trans          &trans  &trans         &trans      &trans         &trans  &trans
+&trans  &trans         &kp LS(COMMA)  &trans       &trans  &trans            &trans  &trans  &trans  &trans  &kp LS(MINUS)  &kp LS(N1)  &kp LS(DOT)    &trans  &trans
+&trans  &trans         &trans         &kp LS(DOT)  &trans  &trans  &trans            &trans          &trans  &kp COMMA      &trans      &kp LS(COMMA)  &trans  &trans
+                                      &trans       &trans  &trans                                    &trans  &trans         &trans
             >;
         };
 
