@@ -106,7 +106,7 @@
 
         at {
             bindings = <&kp RA(Q)>;
-            key-positions = <14 1>;
+            key-positions = <2 15>;
         };
 
         and {
@@ -186,7 +186,7 @@
 
         times {
             bindings = <&kp KP_MULTIPLY>;
-            key-positions = <23 9>;
+            key-positions = <22 37>;
         };
 
         caret {
@@ -230,6 +230,16 @@
             bindings = <&kp COMMA>;
             key-positions = <38 37>;
         };
+
+        exclamation {
+            bindings = <&kp LS(N1)>;
+            key-positions = <1 14>;
+        };
+
+        question {
+            bindings = <&kp LS(MINUS)>;
+            key-positions = <38 39>;
+        };
     };
 
     macros {
@@ -254,9 +264,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                                  &kp UP                     &kp Y                    &kp U      &kp I              &kp O  &kp P                            &hashtag_comment
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G                        &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H                    &kp J      &kp K              &kp L  &apostrophes                     &kp LEFT_ALT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B              &tog 6              &kp DOWN                   &kp N                    &kp M      &kp DOT            &none  &hold_tap_mo_kp_simple 1 LS(N8)  &hold_tap_mo_kp_simple 2 LS(N9)
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                                  &kp UP                     &kp Y                    &kp U      &kp I        &kp O  &kp P                            &hashtag_comment
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G                        &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H                    &kp J      &kp K        &kp L  &apostrophes                     &kp LEFT_ALT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B              &tog 6              &kp DOWN                   &kp N                    &kp M      &kp DOT      &none  &hold_tap_mo_kp_simple 1 LS(N8)  &hold_tap_mo_kp_simple 2 LS(N9)
                                 &kp LGUI  &kp SPACE  &kp LC(LS(RIGHT))                                                 &hold_tap_kp_kp F20 F11  &kp ENTER  &num_word 3
             >;
 
@@ -286,10 +296,10 @@
         raise {
             display-name = "NUMBER";
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6                             &mmv MOVE_UP                     &trans   &kp N7  &kp N8  &kp N9  &trans  &trans
-&kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans   &kp N4  &kp N5  &kp N6  &trans  &trans
-&kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &trans                    &mmv MOVE_DOWN                   &kp DOT  &kp N1  &kp N2  &kp N3  &trans  &trans
-                           &trans   &trans   &trans                                                              &trans   &trans  &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp MINUS                            &mmv MOVE_UP                     &kp N7  &kp N8  &kp N9  &trans  &trans  &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &trans  &kp COMMA            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &trans  &kp DOT    &trans                    &mmv MOVE_DOWN                   &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
+                          &trans   &trans  &trans                                                                &kp N0  &trans  &trans
             >;
         };
 
