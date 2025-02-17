@@ -44,5 +44,8 @@ manifest:
           - openthread
           - edtt
           - trusted-firmware-m
+    - name: zmk-auto-layer
+      remote: urob
+      revision: v0.1 # set to same version as zmk
   self:
     path: config
