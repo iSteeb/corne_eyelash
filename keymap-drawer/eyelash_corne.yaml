@@ -45,9 +45,9 @@ layers:
   - LGUI
   - $$mdi:keyboard-space$$
   - Ctl+Sft+$$mdi:arrow-right-bold$$
-  - {t: F11, h: F20}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - '&num_word 3'
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: F11, h: F20}
   OPEN:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
