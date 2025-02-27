@@ -316,6 +316,69 @@
             bindings = <&kp S &kp T &kp E &kp V &kp E &kp N &kp DOT &kp D &kp U &kp Z &kp E &kp V &kp I &kp C &kp H &kp RA(Q) &kp I &kp O &kp KP_MINUS &kp W &kp A &kp R &kp N &kp E &kp M &kp U &kp E &kp N &kp D &kp E &kp DOT &kp D &kp E>;
             label = "iow_email";
         };
+
+        open_parentheses: open_parentheses {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8)>;
+            label = "OPEN_PARENTHESES";
+        };
+
+        close_parentheses: close_parentheses {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N9)>;
+            label = "CLOSE_PARENTHESES";
+        };
+
+        pair_parentheses: pair_parentheses {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8) &kp LS(N9) &kp LEFT>;
+            label = "PAIR_PARENTHESES";
+        };
+
+        open_squares: open_squares {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N8)>;
+            label = "OPEN_SQUARES";
+        };
+
+        close_squares: close_squares {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N9)>;
+            label = "CLOSE_SQUARES";
+        };
+
+        pair_squares: pair_squares {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N8) &kp RA(N9) &kp LEFT>;
+            label = "PAIR_SQUARES";
+        };
+
+        open_braces: open_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N7)>;
+            label = "OPEN_BRACES";
+        };
+
+        close_braces: close_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N0)>;
+            label = "CLOSE_BRACES";
+        };
+
+        pair_braces: pair_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N7) &kp RA(N0) &kp LEFT>;
+            label = "PAIR_BRACES";
+        };
     };
 
     keymap {
