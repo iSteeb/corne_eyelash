@@ -333,7 +333,7 @@
 
         exclamation {
             bindings = <&kp LS(N1)>;
-            key-positions = <38 24>;
+            key-positions = <38 37>;
         };
 
         question {
