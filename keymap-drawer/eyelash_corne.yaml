@@ -38,10 +38,10 @@ layers:
   - $$mdi:arrow-down-bold$$
   - N
   - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: Sft+8, h: OPEN, s: Sft+*}
-  - {t: Sft+9, h: CLOSE, s: Sft+(}
+  - {t: ',', s: '|'}
+  - {t: ., s: Sft+|}
+  - {t: Sft+., s: 'Sft+,'}
+  - {t: '&parentheses', s: '&brackets'}
   - LGUI
   - $$mdi:keyboard-space$$
   - Ctl+Sft+$$mdi:arrow-right-bold$$
@@ -74,7 +74,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '|'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: AltGr+8, s: AltGr+*}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -89,7 +89,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -124,7 +124,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+|
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: AltGr+9, s: AltGr+(}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -139,7 +139,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
