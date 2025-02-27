@@ -35,17 +35,17 @@
             };
 
             bt_linux {
-                sequence = <L I N U>;
+                sequence = <L I N U X>;
                 bindings = <&bt BT_SEL 1>;
             };
 
             volei {
-                sequence = <V O L E>;
+                sequence = <P A S S>;
                 bindings = <&volei>;
             };
 
             iow_email {
-                sequence = <I O W E>;
+                sequence = <E M A I L>;
                 bindings = <&iow_email>;
             };
 
@@ -54,9 +54,49 @@
                 bindings = <&kp F19>;
             };
 
-            desk {
-                sequence = <D E S K>;
-                bindings = <&kp F11>;
+            op {
+                sequence = <O P>;
+                bindings = <&open_parentheses>;
+            };
+
+            cp {
+                sequence = <C P>;
+                bindings = <&close_parentheses>;
+            };
+
+            pp {
+                sequence = <P P>;
+                bindings = <&pair_parentheses>;
+            };
+
+            os {
+                sequence = <O S>;
+                bindings = <&open_squares>;
+            };
+
+            cs {
+                sequence = <C S>;
+                bindings = <&close_squares>;
+            };
+
+            ps {
+                sequence = <P S>;
+                bindings = <&pair_squares>;
+            };
+
+            ob {
+                sequence = <O B>;
+                bindings = <&open_braces>;
+            };
+
+            cb {
+                sequence = <C B>;
+                bindings = <&close_braces>;
+            };
+
+            pb {
+                sequence = <P B>;
+                bindings = <&pair_braces>;
             };
         };
 
@@ -389,7 +429,7 @@
             bindings = <
 &kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                                  &kp UP                     &kp Y        &kp U      &kp I                    &kp O        &kp P         &hashtag_comment
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G                        &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H        &kp J      &kp K                    &kp L        &apostrophes  &kp LEFT_ALT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B              &tog 6              &kp DOWN                   &kp N        &kp M      &comma_angled            &dot_angled  &colons       &brackets_dance
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B              &tog 6              &kp DOWN                   &kp N        &kp M      &comma_angled            &dot_angled  &colons       &parentheses
                                 &kp LGUI  &kp SPACE  &kp LC(LS(RIGHT))                                                 &num_word 3  &kp ENTER  &hold_tap_kp_kp F20 F11
             >;
 
