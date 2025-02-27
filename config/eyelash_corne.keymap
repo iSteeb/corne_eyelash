@@ -93,6 +93,72 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
         };
+
+        comma_angled: comma_angled {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_ANGLED";
+            bindings = <&kp COMMA>, <&kp NON_US_BSLH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dot_angled: dot_angled {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_ANGLED";
+            bindings = <&kp DOT>, <&kp LS(NON_US_BSLH)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        colons: colons {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLONS";
+            bindings = <&kp LS(DOT)>, <&kp LS(COMMA)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        parentheses: parentheses {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PARENTHESES";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8)>, <&kp LS(N9)>;
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N8)>, <&kp RA(N9)>;
+        };
+
+        braces: braces {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACES";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N7)>, <&kp RA(N0)>;
+        };
+
+        brackets_dance_nested: brackets_dance_nested {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BRACKETS_DANCE_NESTED";
+            bindings = <&parentheses>, <&braces>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        brackets_dance: brackets_dance {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BRACKETS_DANCE";
+            bindings = <&brackets_dance_nested>, <&brackets>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -258,9 +324,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                                  &kp UP                     &kp Y        &kp U      &kp I        &kp O    &kp P                            &hashtag_comment
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G                        &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H        &kp J      &kp K        &kp L    &apostrophes                     &kp LEFT_ALT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B              &tog 6              &kp DOWN                   &kp N        &kp M      &kp COMMA    &kp DOT  &hold_tap_mo_kp_simple 1 LS(N8)  &hold_tap_mo_kp_simple 2 LS(N9)
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                                  &kp UP                     &kp Y        &kp U      &kp I                    &kp O        &kp P         &hashtag_comment
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G                        &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H        &kp J      &kp K                    &kp L        &apostrophes  &kp LEFT_ALT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B              &tog 6              &kp DOWN                   &kp N        &kp M      &comma_angled            &dot_angled  &colons       &brackets_dance
                                 &kp LGUI  &kp SPACE  &kp LC(LS(RIGHT))                                                 &num_word 3  &kp ENTER  &hold_tap_kp_kp F20 F11
             >;
 
@@ -270,9 +336,9 @@
         open_brackets {
             display-name = "OPEN";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans           &kp RA(N7)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &kp NON_US_BSLH  &kp RA(N8)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans           &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &kp RA(N7)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RA(N8)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans      &trans
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
@@ -280,9 +346,9 @@
         close_brackets {
             display-name = "CLOSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans               &kp RA(N0)
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(NON_US_BSLH)  &kp RA(N9)
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans               &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &kp RA(N0)
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RA(N9)
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
