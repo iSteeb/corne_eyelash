@@ -41,7 +41,7 @@ layers:
   - {t: ',', s: '|'}
   - {t: ., s: Sft+|}
   - {t: Sft+., s: 'Sft+,'}
-  - {t: '&parentheses', s: '&brackets'}
+  - '&parentheses'
   - LGUI
   - $$mdi:keyboard-space$$
   - Ctl+Sft+$$mdi:arrow-right-bold$$
