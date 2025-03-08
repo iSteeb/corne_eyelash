@@ -26,7 +26,7 @@ layers:
   - J
   - K
   - L
-  - {t: 'Sft+,', s: Sft+.}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -249,7 +249,7 @@ combos:
   k: $$mdi:keyboard-esc$$
 - p: [17, 18]
   k: '&leader'
-- p: [5, 6]
+- p: [5, 4]
   k: '&num_word 1'
 - p: [23, 24]
   k: {t: '$$mdi:backspace$$', type: backspace}
@@ -319,3 +319,9 @@ combos:
   k: {t: '`', s: '~'}
 - p: [25, 39]
   k: {t: \, s: '|'}
+- p: [2, 15, 30]
+  k: '|'
+- p: [4, 17, 32]
+  k: Sft+|
+- p: [3, 16, 31]
+  k: '&pair_angled'
