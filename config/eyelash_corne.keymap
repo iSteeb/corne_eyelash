@@ -53,49 +53,24 @@
                 bindings = <&kp F19>;
             };
 
-            op {
-                sequence = <O P>;
-                bindings = <&open_parentheses>;
+            ae {
+                sequence = <A E>;
+                bindings = <&kp APOSTROPHE>;
             };
 
-            cp {
-                sequence = <C P>;
-                bindings = <&close_parentheses>;
+            oe {
+                sequence = <O E>;
+                bindings = <&kp SEMI>;
             };
 
-            pp {
-                sequence = <P P>;
-                bindings = <&pair_parentheses>;
+            ue {
+                sequence = <U E>;
+                bindings = <&kp LEFT_BRACKET>;
             };
 
-            os {
-                sequence = <O S>;
-                bindings = <&open_squares>;
-            };
-
-            cs {
-                sequence = <C S>;
-                bindings = <&close_squares>;
-            };
-
-            ps {
-                sequence = <P S>;
-                bindings = <&pair_squares>;
-            };
-
-            ob {
-                sequence = <O B>;
-                bindings = <&open_braces>;
-            };
-
-            cb {
-                sequence = <C B>;
-                bindings = <&close_braces>;
-            };
-
-            pb {
-                sequence = <P B>;
-                bindings = <&pair_braces>;
+            sz {
+                sequence = <S Z>;
+                bindings = <&kp MINUS>;
             };
         };
 
@@ -142,6 +117,16 @@
         escape {
             bindings = <&kp ESC>;
             key-positions = <1 0>;
+        };
+
+        leader {
+            bindings = <&leader>;
+            key-positions = <17 18>;
+        };
+
+        num_word {
+            bindings = <&num_word>;
+            key-positions = <5 6>;
         };
 
         backspace {
@@ -191,14 +176,24 @@
             key-positions = <8 22>;
         };
 
+        grave {
+            bindings = <&kp EQUAL>;
+            key-positions = <22 37>;
+        };
+
+        tilde {
+            bindings = <&kp RA(RIGHT_BRACKET)>;
+            key-positions = <36 23>;
+        };
+
+        combo_apostrophes {
+            bindings = <&apostrophes>;
+            key-positions = <36 22>;
+        };
+
         underscore {
             bindings = <&kp LS(QUESTION)>;
             key-positions = <32 33>;
-        };
-
-        leader {
-            bindings = <&leader>;
-            key-positions = <17 18>;
         };
 
         question {
@@ -226,6 +221,11 @@
             key-positions = <3 4 5>;
         };
 
+        parentheses_pair {
+            bindings = <&pair_parentheses>;
+            key-positions = <2 3 4>;
+        };
+
         open_braces {
             bindings = <&kp RA(N7)>;
             key-positions = <14 15 16>;
@@ -234,6 +234,11 @@
         close_braces {
             bindings = <&kp RA(N0)>;
             key-positions = <16 18 17>;
+        };
+
+        braces_pair {
+            bindings = <&pair_braces>;
+            key-positions = <15 16 17>;
         };
 
         open_brackets {
@@ -246,19 +251,9 @@
             key-positions = <31 32 33>;
         };
 
-        grave {
-            bindings = <&kp EQUAL>;
-            key-positions = <22 37>;
-        };
-
-        tilde {
-            bindings = <&kp RA(RIGHT_BRACKET)>;
-            key-positions = <36 23>;
-        };
-
-        combo_apostrophes {
-            bindings = <&apostrophes>;
-            key-positions = <36 22>;
+        brackets_pair {
+            bindings = <&pair_squares>;
+            key-positions = <30 31 32>;
         };
 
         and {
@@ -299,21 +294,6 @@
         hash {
             bindings = <&kp BACKSLASH>;
             key-positions = <25 39>;
-        };
-
-        parentheses_pair {
-            bindings = <&pair_parentheses>;
-            key-positions = <2 3 4>;
-        };
-
-        braces_pair {
-            bindings = <&pair_braces>;
-            key-positions = <15 16 17>;
-        };
-
-        brackets_pair {
-            bindings = <&pair_squares>;
-            key-positions = <30 31 32>;
         };
     };
 
