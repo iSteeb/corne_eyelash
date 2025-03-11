@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/urob
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
+    - name: ssbb
+      url-base: https://github.com/ssbb
   projects:
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
@@ -47,5 +49,8 @@ manifest:
     - name: zmk-auto-layer
       remote: urob
       revision: v0.1 # set to same version as zmk
+    - name: zmk-listeners
+      remote: ssbb
+      revision: v1
   self:
     path: config
