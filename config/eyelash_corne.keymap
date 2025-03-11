@@ -30,9 +30,7 @@
             bindings = <&rgb_ug RGB_ON &rgb_ug RGB_OFF>;
         };
     };
-}
 
-/ {
     behaviors {
         leader: leader {
             compatible = "zmk,behavior-leader-key";
