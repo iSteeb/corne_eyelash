@@ -23,6 +23,16 @@
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 / {
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+        nav_num_feedback {
+            layers = <1>;
+            bindings = <&rgb_ug RGB_ON &rgb_ug RGB_OFF>;
+        };
+    };
+}
+
+/ {
     behaviors {
         leader: leader {
             compatible = "zmk,behavior-leader-key";
