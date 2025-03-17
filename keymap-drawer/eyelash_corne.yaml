@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - $$mdi:keyboard-tab$$
@@ -27,7 +28,7 @@ layers:
   - K
   - L
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-option$$
+  - {t: 'Sft+Ctl+$$mdi:arrow-right-bold$$', h: 'Sft+Ctl+$$mdi:arrow-left-bold$$'}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -44,7 +45,7 @@ layers:
   - {t: F11, h: F20}
   - LGUI
   - $$mdi:keyboard-space$$
-  - Sft+Ctl+$$mdi:arrow-right-bold$$
+  - $$mdi:apple-keyboard-option$$
   - NUMBERS
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - SHORTCUTS
