@@ -143,14 +143,9 @@
             key-positions = <23 24>;
         };
 
-        opt+bksp {
-            bindings = <&kp LA(BACKSPACE)>;
+        del {
+            bindings = <&kp DELETE>;
             key-positions = <23 24 25>;
-        };
-
-        cmd+bksp {
-            bindings = <&kp LG(BACKSPACE)>;
-            key-positions = <23 24 25 26>;
         };
 
         plus {
@@ -373,7 +368,7 @@
             bindings = <
 &kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                         &kp UP                     &kp Y  &kp U      &kp I   &kp O   &kp P   &kp LG(BACKSLASH)
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G               &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H  &kp J      &kp K   &kp L   &trans  &hold_tap_kp_kp LS(LC(LEFT)) LS(LC(RIGHT))
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B     &tog 4              &kp DOWN                   &kp N  &kp M      &trans  &trans  &trans  &hold_tap_kp_kp F20 F11
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B     &trans              &kp DOWN                   &kp N  &kp M      &trans  &trans  &trans  &hold_tap_kp_kp F20 F11
                                 &kp LGUI  &kp SPACE  &kp LALT                                                 &mo 1  &kp ENTER  &mo 2
             >;
 
@@ -408,17 +403,6 @@
 &trans       &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF  &trans                     &rgb_ug RGB_HUD                   &trans            &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans      &trans  &bootloader
                                               &trans           &mo 3            &trans                                                                        &trans            &mo 3                 &trans
             >;
-        };
-
-        JOSI {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &kp LS(F10)                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &kp LEFT_ARROW  &kp SPACE    &kp RIGHT_ARROW  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &kp LS(F7)                    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                                          &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
         };
     };
 
