@@ -208,11 +208,11 @@ combos:
 - p: [23, 24, 25]
   k: $$mdi:backspace-reverse-outline$$
 - p: [22, 23]
-  k: KP PLUS
+  k: {t: ']', s: '}'}
 - p: [37, 36]
-  k: KP MINUS
+  k: {t: /, s: '?'}
 - p: [7, 8]
-  k: KP EQUAL
+  k: Sft+0
   l: [QWERTY]
 - p: [7, 23]
   k: AltGr+-
@@ -222,7 +222,7 @@ combos:
 - p: [8, 22]
   k: Sft+7
 - p: [22, 37]
-  k: {t: '=', s: +}
+  k: Sft+=
 - p: [36, 23]
   k: AltGr+]
 - p: [36, 22]
@@ -269,9 +269,9 @@ combos:
   k: {t: '`', s: '~'}
 - p: [25, 39]
   k: {t: \, s: '|'}
-- p: [2, 15, 30]
+- p: [0, 13, 28]
   k: '|'
-- p: [4, 17, 32]
+- p: [2, 15, 30]
   k: Sft+|
-- p: [3, 16, 31]
+- p: [1, 14, 29]
   k: '&pair_angled'
