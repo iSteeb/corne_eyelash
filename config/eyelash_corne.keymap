@@ -36,8 +36,6 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            ignore-keys = <LSHFT RSHFT>;
-
             de_ae {
                 sequence = <A>;
                 bindings = <&kp APOSTROPHE>;
@@ -72,7 +70,7 @@
             };
             smb {
                 sequence = <S M B>;
-                bindings = <&iow>;
+                bindings = <&smb>;
             };
         };
 
