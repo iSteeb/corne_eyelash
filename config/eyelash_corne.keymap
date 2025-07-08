@@ -27,6 +27,11 @@
             layers = <1>;
             bindings = <&rgb_ug RGB_ON &rgb_ug RGB_OFF>;
         };
+
+        functional_feedback {
+            layers = <3>;
+            bindings = <&rgb_ug RGB_ON &rgb_ug RGB_OFF>;
+        };
     };
 
     behaviors {
