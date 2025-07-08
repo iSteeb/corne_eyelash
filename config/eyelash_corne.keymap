@@ -52,9 +52,9 @@
                 bindings = <&volei>;
             };
 
-            iow_email {
-                sequence = <E M A I L>;
-                bindings = <&iow_email>;
+            iow {
+                sequence = <I O W>;
+                bindings = <&iow>;
             };
 
             dash {
@@ -324,11 +324,11 @@
             label = "VOLEI";
         };
 
-        iow_email: iow_email {
+        iow: iow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp T &kp E &kp V &kp E &kp N &kp DOT &kp D &kp U &kp Z &kp E &kp V &kp I &kp C &kp H &kp RA(Q) &kp I &kp O &kp KP_MINUS &kp W &kp A &kp R &kp N &kp E &kp M &kp U &kp E &kp N &kp D &kp E &kp DOT &kp D &kp E>;
-            label = "iow_email";
+            bindings = <&kp I &kp O &kp SLASH &kp W &kp A &kp R &kp N &kp E &kp M &kp U &kp E &kp N &kp D &kp E &kp DOT &kp D &kp E>;
+            label = "iow";
         };
 
         pair_parentheses: pair_parentheses {
