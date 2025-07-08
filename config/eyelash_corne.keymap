@@ -30,6 +30,45 @@
     };
 
     behaviors {
+        leader: leader {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            ignore-keys = <LSHFT RSHFT>; \
+
+            de_ae {
+                sequence = <>;
+                bindings = <&kp APOSTROPHE>;
+            };
+            de_oe {
+                sequence = <>;
+                bindings = <&kp SEMI>;
+            };
+            de_ue {
+                sequence = <>;
+                bindings = <&kp LEFT_BRACKET>;
+            };
+            de_eszett {
+                sequence = <>;
+                bindings = <&kp MINUS>;
+            };
+            bt_imax {
+                sequence = <>;
+                bindings = <&bt BT_SEL 0>;
+            };
+            bt_linux {
+                sequence = <>;
+                bindings = <&bt BT_SEL 1>;
+            };
+            volei {
+                sequence = <>;
+                bindings = <&volei>;
+            };
+            iow {
+                sequence = <>;
+                bindings = <&iow>;
+            };
+        };
+
         hold_tap_mo_kp_simple: hold_tap_mo_kp_simple {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_MO_KP_SIMPLE";
