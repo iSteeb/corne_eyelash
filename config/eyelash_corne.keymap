@@ -36,9 +36,42 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
+            ignore-keys = <LSHFT RSHFT>;
 
+            de_ae {
+                sequence = <A>;
+                bindings = <&kp APOSTROPHE>;
+            };
+            de_oe {
+                sequence = <O>;
+                bindings = <&kp SEMI>;
+            };
+            de_ue {
+                sequence = <U>;
+                bindings = <&kp LEFT_BRACKET>;
+            };
+            de_eszett {
+                sequence = <S>;
+                bindings = <&kp MINUS>;
+            };
+            bt_imax {
+                sequence = <I M A X>;
+                bindings = <&bt BT_SEL 0>;
+            };
+            bt_linux {
+                sequence = <E D V>;
+                bindings = <&bt BT_SEL 1>;
+            };
+            volei {
+                sequence = <P A S S>;
+                bindings = <&volei>;
+            };
             iow {
                 sequence = <I O W>;
+                bindings = <&iow>;
+            };
+            smb {
+                sequence = <S M B>;
                 bindings = <&iow>;
             };
         };
