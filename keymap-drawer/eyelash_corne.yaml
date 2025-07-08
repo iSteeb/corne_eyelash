@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: Gui+\, h: 'Meh+$$mdi:apple-keyboard-command$$', s: Gui+|}
+  - {t: Gui+\, s: Gui+|}
   - $$mdi:apple-keyboard-control$$
   - A
   - S
