@@ -36,43 +36,50 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            ignore-keys = <LSHFT RSHFT>; \
 
-            de_ae {
-                sequence = <A>;
-                bindings = <&kp APOSTROPHE>;
-            };
-            de_oe {
-                sequence = <O>;
-                bindings = <&kp SEMI>;
-            };
-            de_ue {
-                sequence = <U>;
-                bindings = <&kp LEFT_BRACKET>;
-            };
-            de_eszett {
-                sequence = <S>;
-                bindings = <&kp MINUS>;
-            };
             bt_imax {
                 sequence = <I M A X>;
                 bindings = <&bt BT_SEL 0>;
             };
+
             bt_linux {
-                sequence = <E D V>;
+                sequence = <L I N U X>;
                 bindings = <&bt BT_SEL 1>;
             };
+
             volei {
                 sequence = <P A S S>;
                 bindings = <&volei>;
             };
+
             iow {
                 sequence = <I O W>;
                 bindings = <&iow>;
             };
-            smb {
-                sequence = <S M B>;
-                bindings = <&iow>;
+
+            dash {
+                sequence = <D A S H>;
+                bindings = <&kp F19>;
+            };
+
+            ae {
+                sequence = <A E>;
+                bindings = <&kp APOSTROPHE>;
+            };
+
+            oe {
+                sequence = <O E>;
+                bindings = <&kp SEMI>;
+            };
+
+            ue {
+                sequence = <U E>;
+                bindings = <&kp LEFT_BRACKET>;
+            };
+
+            sz {
+                sequence = <S Z>;
+                bindings = <&kp MINUS>;
             };
         };
 
@@ -324,14 +331,6 @@
             label = "iow";
         };
 
-
-        smb: smb {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp S &kp M &kp B &kp LS(DOT) &kp LS(N7) &kp LS(N7)>;
-            label = "smb";
-        };
-
         pair_parentheses: pair_parentheses {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -367,7 +366,7 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                         &kp UP                     &kp Y  &kp U      &kp I   &kp O   &kp P   &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(BACKSLASH)
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                         &kp UP                     &kp Y  &kp U      &kp I   &kp O   &kp P   &kp LG(BACKSLASH)
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G               &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H  &kp J      &kp K   &kp L   &trans  &hold_tap_kp_kp LS(LC(LEFT)) LS(LC(RIGHT))
 &kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B     &trans              &kp DOWN                   &kp N  &kp M      &trans  &trans  &trans  &hold_tap_kp_kp F20 F11
                                 &kp LGUI  &kp SPACE  &kp LALT                                                 &mo 1  &kp ENTER  &mo 2
