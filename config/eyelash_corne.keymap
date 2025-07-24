@@ -374,7 +374,7 @@
             bindings = <
 &kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                         &kp UP                     &kp Y  &kp U      &kp I   &kp O   &kp P   &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(LS(LA(LC(T))))
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G               &kp LEFT  &kt LEFT_SHIFT  &kp RIGHT  &kp H  &kp J      &kp K   &kp L   &trans  &hold_tap_kp_kp LS(LC(LEFT)) LS(LC(RIGHT))
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B     &trans              &kp DOWN                   &kp N  &kp M      &trans  &trans  &trans  &hold_tap_kp_kp F20 F11
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B     &kt LEFT_CONTROL    &kp DOWN                   &kp N  &kp M      &trans  &trans  &trans  &hold_tap_kp_kp F20 F11
                                 &kp LGUI  &kp SPACE  &kp LALT                                                 &mo 1  &kp ENTER  &mo 2
             >;
 
