@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: Hyper+T, h: 'Meh+$$mdi:apple-keyboard-command$$'}
+  - {t: Ctl+K, h: 'Meh+$$mdi:apple-keyboard-command$$'}
   - $$mdi:apple-keyboard-control$$
   - A
   - S
