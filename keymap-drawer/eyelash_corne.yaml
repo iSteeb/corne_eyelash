@@ -27,7 +27,7 @@ layers:
   - J
   - K
   - L
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB1'
   - {t: 'Sft+Ctl+$$mdi:arrow-right-bold$$', h: 'Sft+Ctl+$$mdi:arrow-left-bold$$'}
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -41,7 +41,7 @@ layers:
   - M
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB2'
   - {t: F11, h: F20}
   - LGUI
   - $$mdi:keyboard-space$$
