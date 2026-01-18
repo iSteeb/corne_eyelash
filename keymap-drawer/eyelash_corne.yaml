@@ -8,12 +8,12 @@ layers:
   - R
   - T
   - $$mdi:arrow-up-bold$$
-  - Y
+  - Z
   - U
   - I
   - O
   - P
-  - {t: Hyper+T, h: 'Meh+$$mdi:apple-keyboard-command$$'}
+  - {t: Hyper+T, h: (LC(LS(LA(LEFT GUI))))}
   - $$mdi:apple-keyboard-control$$
   - A
   - S
@@ -28,9 +28,9 @@ layers:
   - K
   - L
   - $$mdi:mouse-right-click-outline$$
-  - {t: 'Sft+Ctl+$$mdi:arrow-right-bold$$', h: 'Sft+Ctl+$$mdi:arrow-left-bold$$'}
+  - {t: 'Sft+Ctl+$$mdi:arrow-right-bold$$', h: (LS(LC(LEFT)))}
   - $$mdi:apple-keyboard-shift$$
-  - Z
+  - Y
   - X
   - C
   - V
@@ -266,12 +266,14 @@ combos:
 - p: [24, 38]
   k: AltGr+Q
 - p: [25, 10, 39]
-  k: {t: '`', s: '~'}
+  k: '|'
 - p: [25, 39]
   k: {t: \, s: '|'}
-- p: [0, 13, 28]
-  k: '|'
-- p: [2, 15, 30]
-  k: Sft+|
-- p: [1, 14, 29]
+- p: [0, 1, 2]
+  k: {t: '`', s: '~'}
+- p: [30, 28, 29]
+  k: Sft+`
+- p: [13, 15, 14]
   k: '&pair_angled'
+- p: [10, 25]
+  k: AltGr+E
