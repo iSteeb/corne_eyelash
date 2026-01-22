@@ -305,7 +305,7 @@
         volei: volei {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOT &kp LS(V) &kp O &kp L &kp E &kp I &kp B &kp O &kp L &kp N1 &kp N8 &kp N0 &kp N9 &kp LS(N1) &kp RET>;
+            bindings = <&kp DOT &kp LS(V) &kp O &kp L &kp E &kp I &kp B &kp O &kp L &kp N1 &kp N8 &kp N0 &kp N9 &kp LS(N4) &kp RET>;
             label = "VOLEI";
         };
 
