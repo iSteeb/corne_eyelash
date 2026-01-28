@@ -1,0 +1,4 @@
+&left_encoder {
+    status = "okay";
+    steps = <20>;
+};
