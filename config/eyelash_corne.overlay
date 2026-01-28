@@ -2,7 +2,3 @@
     status = "okay";
     steps = <80>; 
 };
-
-&sensors {
-    triggers-per-rotation = <20>;
-};
