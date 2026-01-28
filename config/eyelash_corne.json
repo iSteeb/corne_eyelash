@@ -66,7 +66,8 @@
       "identifier": "encoder_left",
       "compatible": "alps,ec11",
       "label": "LEFT_ENCODER",
-      "enabled": true
+      "enabled": true,
+      "triggers-per-rotation" = <20>;
     }
   ]
 }
