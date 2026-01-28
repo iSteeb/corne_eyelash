@@ -1,4 +1,8 @@
 &left_encoder {
     status = "okay";
-    steps = <20>;
+    steps = <80>; 
+};
+
+&sensors {
+    triggers-per-rotation = <20>;
 };
