@@ -192,7 +192,7 @@
         };
 
         close_brackets {
-            bindings = <&kp LS(RIGHT_BRACKET)>;
+            bindings = <&kp RIGHT_BRACKET>;
             key-positions = <15 16>;
         };
 
