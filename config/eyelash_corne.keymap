@@ -63,19 +63,19 @@
             };
         };
 
-        hold_tap_kp_kp: hold_tap_kp_kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_KP_KP";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <400>;
-        };
-
         left_arrow_shift_override: left_arrow_shift_override {
             compatible = "zmk,behavior-mod-morph";
             label = "LEFT_ARROW_SHIFT_OVERRIDE";
             bindings = <&kp LEFT>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dollar_euro: dollar_euro {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOLLAR_EURO";
+            bindings = <&kp LS(NUMBER_4)>, <&kp LS(RA(NUMBER_2))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
