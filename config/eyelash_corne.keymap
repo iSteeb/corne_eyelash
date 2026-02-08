@@ -104,6 +104,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        comma_semi: comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMI";
+            bindings = <&kp COMMA>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dot_colon: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            bindings = <&kp DOT>, <&kp LS(SEMI)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -177,12 +195,12 @@
         };
 
         comma {
-            bindings = <&kp COMMA>;
+            bindings = <&comma_semi>;
             key-positions = <39 38>;
         };
 
         dot {
-            bindings = <&kp DOT>;
+            bindings = <&dot_colon>;
             key-positions = <38 37>;
         };
 
@@ -192,7 +210,7 @@
         };
 
         close_parentheses {
-            bindings = <&kp LS(N9)>;
+            bindings = <&kp LS(N0)>;
             key-positions = <3 2>;
         };
 
@@ -333,7 +351,7 @@
                         &trans  &trans  &trans                                                             &trans  &kp N0  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN UP>;
+            sensor-bindings = <&inc_dec_kp LA(DEL) LA(BACKSPACE)>;
         };
 
         lower {
