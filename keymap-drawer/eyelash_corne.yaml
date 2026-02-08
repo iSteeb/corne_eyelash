@@ -293,17 +293,17 @@ combos:
 - p: [8, 9, 10]
   k: Sft+7
 - p: [9, 10]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: Sft+4
 - p: [23, 37]
   k: Sft+1
 - p: [9, 8]
-  k: Sft+]
+  k: Sft+8
 - p: [22, 23]
   k: Sft+5
 - p: [24, 38]
   k: Sft+2
 - p: [25, 23, 9]
-  k: '|'
+  k: Sft+6
 - p: [25, 39]
   k: Sft+3
 - p: [32, 31]
