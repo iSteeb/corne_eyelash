@@ -8,7 +8,7 @@ layers:
   - R
   - T
   - $$mdi:arrow-up-bold$$
-  - Z
+  - Y
   - U
   - I
   - O
@@ -30,7 +30,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'Sft+Ctl+$$mdi:arrow-right-bold$$', h: 'Sft+Ctl+$$mdi:arrow-left-bold$$'}
   - $$mdi:apple-keyboard-shift$$
-  - Y
+  - Z
   - X
   - C
   - V
@@ -279,19 +279,17 @@ combos:
 - p: [38, 37]
   k: {t: ., s: '>'}
 - p: [3, 4]
-  k: Sft+8
+  k: Sft+9
 - p: [3, 2]
   k: Sft+9
 - p: [2, 3, 4]
   k: '&pair_parentheses'
-- p: [15, 16, 17]
-  k: '&pair_braces'
 - p: [16, 17]
-  k: AltGr+8
+  k: {t: '[', s: '{'}
 - p: [15, 16]
-  k: AltGr+9
+  k: Sft+]
 - p: [15, 16, 17]
-  k: '&pair_squares'
+  k: {t: '&pair_squares', s: '&pair_braces'}
 - p: [8, 9, 10]
   k: Sft+7
 - p: [9, 10]
@@ -309,8 +307,8 @@ combos:
 - p: [25, 39]
   k: Sft+3
 - p: [32, 31]
-  k: {t: '`', s: '~'}
+  k: Sft+,
 - p: [30, 31]
-  k: Sft+`
+  k: Sft+.
 - p: [30, 31, 32]
   k: '&pair_angled'
