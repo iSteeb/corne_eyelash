@@ -64,12 +64,12 @@
 
             de_oeCAP {
                 sequence = <O O>;
-                bindings = <&kp LS(SQT) &kp LS(O)>>;
+                bindings = <&kp LS(SQT) &kp LS(O)>;
             };
 
             de_ueCAP {
                 sequence = <U U>;
-                bindings = <&kp LS(SQT) &kp LS(U)>>;
+                bindings = <&kp LS(SQT) &kp LS(U)>;
             };
 
             volei {
