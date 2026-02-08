@@ -287,7 +287,7 @@ combos:
 - p: [16, 17]
   k: {t: '[', s: '{'}
 - p: [15, 16]
-  k: Sft+]
+  k: {t: ']', s: '}'}
 - p: [15, 16, 17]
   k: {t: '&pair_squares', s: '&pair_braces'}
 - p: [8, 9, 10]
