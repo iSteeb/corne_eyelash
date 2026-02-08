@@ -40,7 +40,7 @@ layers:
   - N
   - M
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - GLOBE
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: F11, h: F20}
   - LGUI
