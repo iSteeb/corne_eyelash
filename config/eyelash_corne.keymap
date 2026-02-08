@@ -63,15 +63,6 @@
             };
         };
 
-        left_arrow_shift_override: left_arrow_shift_override {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_ARROW_SHIFT_OVERRIDE";
-            bindings = <&kp LEFT>, <&kp LEFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         dollar_euro: dollar_euro {
             compatible = "zmk,behavior-mod-morph";
             label = "DOLLAR_EURO";
@@ -88,6 +79,15 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <400>;
+        };
+
+        pair_squares_braces: pair_squares_braces {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PAIR_SQUARES_BRACES";
+            bindings = <&pair_squares>, <&pair_braces>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -172,7 +172,7 @@
         };
 
         open_parentheses {
-            bindings = <&kp LS(N8)>;
+            bindings = <&kp LS(N9)>;
             key-positions = <3 4>;
         };
 
@@ -186,23 +186,18 @@
             key-positions = <2 3 4>;
         };
 
-        braces_pair {
-            bindings = <&pair_braces>;
-            key-positions = <15 16 17>;
-        };
-
         open_brackets {
-            bindings = <&kp RA(N8)>;
+            bindings = <&kp LEFT_BRACKET>;
             key-positions = <16 17>;
         };
 
         close_brackets {
-            bindings = <&kp RA(N9)>;
+            bindings = <&kp LS(RIGHT_BRACKET)>;
             key-positions = <15 16>;
         };
 
         brackets_pair {
-            bindings = <&pair_squares>;
+            bindings = <&pair_squares_braces>;
             key-positions = <15 16 17>;
         };
 
@@ -247,12 +242,12 @@
         };
 
         angled_open {
-            bindings = <&kp GRAVE>;
+            bindings = <&kp LS(COMMA)>;
             key-positions = <32 31>;
         };
 
         angled_close {
-            bindings = <&kp LS(GRAVE)>;
+            bindings = <&kp LS(DOT)>;
             key-positions = <30 31>;
         };
 
@@ -287,7 +282,7 @@
         pair_braces: pair_braces {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &left_arrow_shift_override>;
+            bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
             label = "PAIR_BRACES";
         };
 
@@ -305,9 +300,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                         &kp UP               &kp Z  &kp U      &kp I   &kp O   &kp P   &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(LS(LA(LC(T))))
+&kp TAB           &kp Q  &kp W  &kp E     &kp R      &kp T                         &kp UP               &kp Y  &kp U      &kp I   &kp O   &kp P   &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(LS(LA(LC(T))))
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D     &kp F      &kp G               &kp LEFT  &trans    &kp RIGHT  &kp H  &kp J      &kp K   &kp L   &trans  &hold_tap_kp_kp LS(LC(LEFT)) LS(LC(RIGHT))
-&kp LEFT_SHIFT    &kp Y  &kp X  &kp C     &kp V      &kp B     &tog 4              &kp DOWN             &kp N  &kp M      &trans  &trans  &trans  &hold_tap_kp_kp F20 F11
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C     &kp V      &kp B     &tog 4              &kp DOWN             &kp N  &kp M      &trans  &trans  &trans  &hold_tap_kp_kp F20 F11
                                 &kp LGUI  &kp SPACE  &kp LALT                                           &mo 1  &kp ENTER  &mo 2
             >;
 
