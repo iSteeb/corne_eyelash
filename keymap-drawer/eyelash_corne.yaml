@@ -159,7 +159,7 @@ layers:
   - F7
   - F8
   - F9
-  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - RGB TOG
   - Ctl+Alt+$$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -292,27 +292,25 @@ combos:
   k: AltGr+9
 - p: [15, 16, 17]
   k: '&pair_squares'
-- p: [8, 23]
-  k: Sft+6
-- p: [8, 23, 37]
-  k: Sft+4
+- p: [8, 9, 10]
+  k: Sft+7
+- p: [9, 10]
+  k: {t: Sft+4, s: Sft+AltGr+2}
 - p: [23, 37]
   k: Sft+1
-- p: [9, 24]
+- p: [9, 8]
   k: Sft+]
-- p: [9, 24, 38]
+- p: [22, 23]
   k: Sft+5
 - p: [24, 38]
-  k: AltGr+Q
-- p: [25, 10, 39]
+  k: Sft+2
+- p: [25, 23, 9]
   k: '|'
 - p: [25, 39]
-  k: {t: \, s: '|'}
+  k: Sft+3
 - p: [32, 31]
   k: {t: '`', s: '~'}
 - p: [30, 31]
   k: Sft+`
 - p: [30, 31, 32]
   k: '&pair_angled'
-- p: [10, 25]
-  k: AltGr+E
