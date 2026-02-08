@@ -207,7 +207,7 @@
         };
 
         dollar {
-            bindings = <&none>;
+            bindings = <&kp LS(NUMBER_4)>;
             key-positions = <9 10>;
         };
 
@@ -217,7 +217,7 @@
         };
 
         asterisk {
-            bindings = <&kp LS(RIGHT_BRACKET)>;
+            bindings = <&kp LS(N8)>;
             key-positions = <9 8>;
         };
 
@@ -232,7 +232,7 @@
         };
 
         caret {
-            bindings = <&kp NON_US_BSLH>;
+            bindings = <&kp LS(NUMBER_6)>;
             key-positions = <25 23 9>;
         };
 
