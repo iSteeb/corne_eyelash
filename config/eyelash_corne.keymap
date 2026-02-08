@@ -80,15 +80,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-
-        dollar_euro: dollar_euro {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOLLAR_EURO";
-            bindings = <&kp LS(NUMBER_4)>, <&kp LS(RA(NUMBER_2))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
     };
 
     combos {
@@ -212,7 +203,7 @@
         };
 
         dollar {
-            bindings = <&dollar_euro>;
+            bindings = <&none>;
             key-positions = <9 10>;
         };
 
