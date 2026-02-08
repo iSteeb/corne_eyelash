@@ -39,22 +39,37 @@
 
             de_ae {
                 sequence = <A>;
-                bindings = <&kp APOSTROPHE>;
+                bindings = <&kp LS(SQT) &kp A>;
             };
 
             de_oe {
                 sequence = <O>;
-                bindings = <&kp SEMI>;
+                bindings = <&kp LS(SQT) &kp O>;
             };
 
             de_ue {
                 sequence = <U>;
-                bindings = <&kp LEFT_BRACKET>;
+                bindings = <&kp LS(SQT) &kp U>;
             };
 
             de_eszett {
                 sequence = <Z>;
-                bindings = <&kp MINUS>;
+                bindings = <&kp RA(S)>;
+            };
+
+            de_aeCAP {
+                sequence = <A A>;
+                bindings = <&kp LS(SQT) &kp LS(A)>;
+            };
+
+            de_oeCAP {
+                sequence = <O O>;
+                bindings = <&kp LS(SQT) &kp LS(O)>>;
+            };
+
+            de_ueCAP {
+                sequence = <U U>;
+                bindings = <&kp LS(SQT) &kp LS(U)>>;
             };
 
             volei {
