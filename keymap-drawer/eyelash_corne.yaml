@@ -293,7 +293,7 @@ combos:
 - p: [8, 9, 10]
   k: Sft+7
 - p: [9, 10]
-  k: Sft+4
+  k: {t: Sft+4, s: Sft+AltGr+2}
 - p: [23, 37]
   k: Sft+1
 - p: [9, 8]

@@ -650,6 +650,7 @@ rect.held, rect.combo.held {
 <g class="combo combopos-22">
 <rect rx="6" ry="6" x="798" y="18" width="28" height="26" class="combo"/>
 <text x="812" y="31" class="combo tap">Sft+4</text>
+<text x="812" y="20" class="combo shifted"><tspan style="font-size: 60%">Sft+AltGr…</tspan></text>
 </g>
 <g class="combo combopos-23">
 <rect rx="6" ry="6" x="714" y="106" width="28" height="26" class="combo"/>
@@ -1051,6 +1052,7 @@ rect.held, rect.combo.held {
 <g class="combo combopos-20">
 <rect rx="6" ry="6" x="798" y="18" width="28" height="26" class="combo"/>
 <text x="812" y="31" class="combo tap">Sft+4</text>
+<text x="812" y="20" class="combo shifted"><tspan style="font-size: 60%">Sft+AltGr…</tspan></text>
 </g>
 <g class="combo combopos-21">
 <rect rx="6" ry="6" x="714" y="106" width="28" height="26" class="combo"/>
@@ -1438,6 +1440,7 @@ rect.held, rect.combo.held {
 <g class="combo combopos-20">
 <rect rx="6" ry="6" x="798" y="18" width="28" height="26" class="combo"/>
 <text x="812" y="31" class="combo tap">Sft+4</text>
+<text x="812" y="20" class="combo shifted"><tspan style="font-size: 60%">Sft+AltGr…</tspan></text>
 </g>
 <g class="combo combopos-21">
 <rect rx="6" ry="6" x="714" y="106" width="28" height="26" class="combo"/>
@@ -1829,6 +1832,7 @@ rect.held, rect.combo.held {
 <g class="combo combopos-20">
 <rect rx="6" ry="6" x="798" y="18" width="28" height="26" class="combo"/>
 <text x="812" y="31" class="combo tap">Sft+4</text>
+<text x="812" y="20" class="combo shifted"><tspan style="font-size: 60%">Sft+AltGr…</tspan></text>
 </g>
 <g class="combo combopos-21">
 <rect rx="6" ry="6" x="714" y="106" width="28" height="26" class="combo"/>
@@ -2217,6 +2221,7 @@ rect.held, rect.combo.held {
 <g class="combo combopos-20">
 <rect rx="6" ry="6" x="798" y="18" width="28" height="26" class="combo"/>
 <text x="812" y="31" class="combo tap">Sft+4</text>
+<text x="812" y="20" class="combo shifted"><tspan style="font-size: 60%">Sft+AltGr…</tspan></text>
 </g>
 <g class="combo combopos-21">
 <rect rx="6" ry="6" x="714" y="106" width="28" height="26" class="combo"/>
