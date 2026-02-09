@@ -53,22 +53,22 @@
             };
 
             de_eszett {
-                sequence = <Z>;
+                sequence = <S>;
                 bindings = <&kp RA(S)>;
             };
 
             de_aeCAP {
-                sequence = <A A>;
+                sequence = <LSHIFT A>;
                 bindings = <&kp LS(SQT) &kp LS(A)>;
             };
 
             de_oeCAP {
-                sequence = <O O>;
+                sequence = <LSHIFT O>;
                 bindings = <&kp LS(SQT) &kp LS(O)>;
             };
 
             de_ueCAP {
-                sequence = <U U>;
+                sequence = <LSHIFT U>;
                 bindings = <&kp LS(SQT) &kp LS(U)>;
             };
 
