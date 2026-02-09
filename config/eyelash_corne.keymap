@@ -240,7 +240,7 @@
         };
 
         dollar {
-            bindings = <&kp LS(NUMBER_4)>;
+            bindings = <&dollar_euro>;
             key-positions = <9 10>;
         };
 
