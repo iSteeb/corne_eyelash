@@ -81,7 +81,7 @@
         dollar_euro: dollar_euro {
             compatible = "zmk,behavior-mod-morph";
             label = "DOLLAR_EURO";
-            bindings = <&kp LS(NUMBER_4)>, <&kp LS(RA(NUMBER_2))>;
+            bindings = <&kp LS(NUMBER_4)>, <&euro>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -239,8 +239,8 @@
             key-positions = <8 9 10>;
         };
 
-        dollar {
-            bindings = <&kp LS(N4)>;
+        dollar_euro {
+            bindings = <&dollar_euro>;
             key-positions = <9 10>;
         };
 
@@ -330,6 +330,13 @@
             #binding-cells = <0>;
             bindings = <&kp LS(COMMA) &kp LS(DOT) &kp LEFT>;
             label = "PAIR_ANGLED";
+        };
+
+        euro: euro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(U)) &kp N2 &kp N0 &kp A &kp C &kp RET>;
+            label = "EURO";
         };
     };
 
