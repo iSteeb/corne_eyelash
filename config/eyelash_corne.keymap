@@ -132,40 +132,136 @@
             tapping-term-ms = <400>;
         };
 
+        /*
+         * Arrow -> nav morphs.
+         *
+         * Mod-morph's `mods` mask is OR'd: any listed modifier triggers the
+         * morph. To require that Shift AND GUI AND Alt AND Ctrl are ALL held,
+         * we nest four mod-morphs per arrow. The morph only reaches the nav
+         * key (PgUp/PgDn/Home/End) when every level has its mod satisfied;
+         * any other mod combination (including a single mod like just Shift)
+         * falls through to the plain arrow, so normal shift+arrow selection,
+         * ctrl+arrow word jumps, etc. keep working.
+         */
+
+        // --- UP -> PAGE_UP when Shift+GUI+Alt+Ctrl all held ---
+        up_pg_up_ctl: up_pg_up_ctl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_PG_UP_CTL";
+            #binding-cells = <0>;
+            bindings = <&kp UP>, <&kp PAGE_UP>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        up_pg_up_alt: up_pg_up_alt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_PG_UP_ALT";
+            #binding-cells = <0>;
+            bindings = <&kp UP>, <&up_pg_up_ctl>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+        up_pg_up_gui: up_pg_up_gui {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_PG_UP_GUI";
+            #binding-cells = <0>;
+            bindings = <&kp UP>, <&up_pg_up_alt>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
         up_pg_up: up_pg_up {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_PG_UP";
-            bindings = <&kp UP>, <&kp PAGE_UP>;
-
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_LALT|MOD_LSFT|MOD_LCTL)>;
+            bindings = <&kp UP>, <&up_pg_up_gui>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        // --- DOWN -> PAGE_DOWN when Shift+GUI+Alt+Ctrl all held ---
+        down_pg_down_ctl: down_pg_down_ctl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN_PG_DOWN_CTL";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        down_pg_down_alt: down_pg_down_alt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN_PG_DOWN_ALT";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN>, <&down_pg_down_ctl>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+        down_pg_down_gui: down_pg_down_gui {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN_PG_DOWN_GUI";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN>, <&down_pg_down_alt>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
         down_pg_down: down_pg_down {
             compatible = "zmk,behavior-mod-morph";
             label = "DOWN_PG_DOWN";
-            bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
-
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_LSFT|MOD_LCTL|MOD_LGUI)>;
+            bindings = <&kp DOWN>, <&down_pg_down_gui>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        // --- LEFT -> HOME when Shift+GUI+Alt+Ctrl all held ---
+        left_home_ctl: left_home_ctl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_HOME_CTL";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&kp HOME>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        left_home_alt: left_home_alt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_HOME_ALT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&left_home_ctl>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+        left_home_gui: left_home_gui {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_HOME_GUI";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&left_home_alt>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
         left_home: left_home {
             compatible = "zmk,behavior-mod-morph";
             label = "LEFT_HOME";
-            bindings = <&kp LEFT>, <&kp HOME>;
-
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_LALT|MOD_LSFT|MOD_LCTL)>;
+            bindings = <&kp LEFT>, <&left_home_gui>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        // --- RIGHT -> END when Shift+GUI+Alt+Ctrl all held ---
+        right_end_ctl: right_end_ctl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_END_CTL";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp END>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        right_end_alt: right_end_alt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_END_ALT";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&right_end_ctl>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+        right_end_gui: right_end_gui {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_END_GUI";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&right_end_alt>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
         right_end: right_end {
             compatible = "zmk,behavior-mod-morph";
             label = "RIGHT_END";
-            bindings = <&kp RIGHT>, <&kp END>;
-
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_LALT|MOD_LSFT|MOD_LCTL)>;
+            bindings = <&kp RIGHT>, <&right_end_gui>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 

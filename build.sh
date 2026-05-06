@@ -4,6 +4,9 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
+OUTPUT_DIR="${OUTPUT_DIR:-$HOME/Downloads}"
+mkdir -p "$OUTPUT_DIR"
+
 export ZEPHYR_SDK_INSTALL_DIR="${ZEPHYR_SDK_INSTALL_DIR:-$HOME/.local/share/zephyr-sdk-0.16.3}"
 export PYENV_VERSION="${PYENV_VERSION:-west}"
 
@@ -85,14 +88,50 @@ else
     warn "settings_reset: no firmware output found"
 fi
 
+# ── Copy artifacts to OUTPUT_DIR ─────────────────────────────────
+info "Copying firmware to ${OUTPUT_DIR}..."
+copy_artifact() {
+    local label="$1"
+    local out_name="$2"
+    local src=""
+    for ext in uf2 bin; do
+        local candidate="build/${label}/zephyr/zmk.${ext}"
+        if [ -f "$candidate" ]; then
+            src="$candidate"
+            local dest="${OUTPUT_DIR}/${out_name}.${ext}"
+            cp -f "$src" "$dest"
+            info "  ${dest}"
+            return 0
+        fi
+    done
+    warn "${label}: no firmware artifact to copy"
+    return 1
+}
+
+copy_artifact left            eyelash_corne_left
+copy_artifact right           eyelash_corne_right
+copy_artifact settings_reset  eyelash_corne_settings_reset
+
 # ── Summary ──────────────────────────────────────────────────────
 echo ""
 info "=== Build complete ==="
 echo ""
-info "Firmware files:"
+info "Firmware files (build tree):"
 for d in build/left build/right build/settings_reset; do
     for ext in uf2 bin; do
         f="${d}/zephyr/zmk.${ext}"
+        if [ -f "$f" ]; then
+            size=$(du -h "$f" | cut -f1)
+            echo "  ${f}  (${size})"
+        fi
+    done
+done
+
+echo ""
+info "Firmware files (${OUTPUT_DIR}):"
+for name in eyelash_corne_left eyelash_corne_right eyelash_corne_settings_reset; do
+    for ext in uf2 bin; do
+        f="${OUTPUT_DIR}/${name}.${ext}"
         if [ -f "$f" ]; then
             size=$(du -h "$f" | cut -f1)
             echo "  ${f}  (${size})"
