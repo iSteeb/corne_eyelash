@@ -375,6 +375,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(LS(RIGHT)) LS(LC(LEFT))>;
         };
 
         adjust {
@@ -390,12 +392,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        shortcuts {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
