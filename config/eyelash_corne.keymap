@@ -256,7 +256,7 @@
 
         percent {
             bindings = <&kp LS(N5)>;
-            key-positions = <22 23>;
+            key-positions = <22 23 24 25>;
         };
 
         at {
