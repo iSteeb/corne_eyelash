@@ -1,5 +1,13 @@
-build/
-zmk/
-modules/
-tools/
+# West workspace (managed by `west update`)
 .west/
+eyelash_corne/
+modules/
+nice-view-gem/
+zmk/
+zmk-auto-layer/
+zmk-leader-key/
+zmk-listeners/
+zephyr/
+
+# Build output
+build/
