@@ -144,156 +144,9 @@
          * ctrl+arrow word jumps, etc. keep working.
          */
         // --- UP -> PAGE_UP when Shift+GUI+Alt+Ctrl all held ---
-
-        up_pg_up_ctl: up_pg_up_ctl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_PG_UP_CTL";
-            #binding-cells = <0>;
-            bindings = <&kp UP>, <&kp PAGE_UP>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        up_pg_up_alt: up_pg_up_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_PG_UP_ALT";
-            #binding-cells = <0>;
-            bindings = <&kp UP>, <&up_pg_up_ctl>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        up_pg_up_gui: up_pg_up_gui {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_PG_UP_GUI";
-            #binding-cells = <0>;
-            bindings = <&kp UP>, <&up_pg_up_alt>;
-
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        up_pg_up: up_pg_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_PG_UP";
-            #binding-cells = <0>;
-            bindings = <&kp UP>, <&up_pg_up_gui>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         // --- DOWN -> PAGE_DOWN when Shift+GUI+Alt+Ctrl all held ---
-
-        down_pg_down_ctl: down_pg_down_ctl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOWN_PG_DOWN_CTL";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        down_pg_down_alt: down_pg_down_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOWN_PG_DOWN_ALT";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&down_pg_down_ctl>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        down_pg_down_gui: down_pg_down_gui {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOWN_PG_DOWN_GUI";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&down_pg_down_alt>;
-
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        down_pg_down: down_pg_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOWN_PG_DOWN";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&down_pg_down_gui>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         // --- LEFT -> HOME when Shift+GUI+Alt+Ctrl all held ---
-
-        left_home_ctl: left_home_ctl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_HOME_CTL";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&kp HOME>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        left_home_alt: left_home_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_HOME_ALT";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&left_home_ctl>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        left_home_gui: left_home_gui {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_HOME_GUI";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&left_home_alt>;
-
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        left_home: left_home {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_HOME";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&left_home_gui>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         // --- RIGHT -> END when Shift+GUI+Alt+Ctrl all held ---
-
-        right_end_ctl: right_end_ctl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_END_CTL";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp END>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        right_end_alt: right_end_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_END_ALT";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&right_end_ctl>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        right_end_gui: right_end_gui {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_END_GUI";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&right_end_alt>;
-
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        right_end: right_end {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_END";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&right_end_gui>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     combos {
@@ -525,10 +378,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E      &kp R      &kp T                                   &up_pg_up                  &kp Y  &kp U      &kp I   &kp O   &kp P   &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(LS(LA(LC(S))))
-&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &left_home  &trans         &right_end  &kp H  &kp J      &kp K   &kp L   &trans  &hold_tap_clear_kp 0 LC(LS(C))
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B     &sk LEFT_SHIFT                &down_pg_down              &kp N  &kp M      &trans  &trans  &trans  &hold_tap_kp_kp LC(C) LC(V)
-                              &kp LCTRL  &kp SPACE  &kp LGUI                                                           &mo 1  &kp ENTER  &mo 2
+&kp TAB         &kp Q  &kp W  &kp E      &kp R      &kp T                                 &kp UP               &kp Y  &kp U      &kp I   &kp O   &kp P   &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(LS(LA(LC(S))))
+&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &kp LEFT  &trans    &kp RIGHT  &kp H  &kp J      &kp K   &kp L   &trans  &hold_tap_clear_kp 0 LC(LS(C))
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B     &sk LEFT_SHIFT              &kp DOWN             &kp N  &kp M      &trans  &trans  &trans  &hold_tap_kp_kp LC(C) LC(V)
+                              &kp LCTRL  &kp SPACE  &kp LGUI                                                   &mo 1  &kp ENTER  &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp LC(RIGHT) LC(LEFT)>;
