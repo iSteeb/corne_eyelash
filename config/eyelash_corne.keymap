@@ -196,7 +196,7 @@
 
         slash {
             bindings = <&kp SLASH>;
-            key-positions = <37 24>;
+            key-positions = <36 23>;
         };
 
         backtic {
@@ -206,7 +206,7 @@
 
         tilde {
             bindings = <&kp LS(GRAVE)>;
-            key-positions = <36 23>;
+            key-positions = <37 24>;
         };
 
         quotes {
@@ -261,7 +261,7 @@
 
         and {
             bindings = <&kp LS(N7)>;
-            key-positions = <8 9 10>;
+            key-positions = <8 9 7>;
         };
 
         dollar_euro {
@@ -271,7 +271,7 @@
 
         exclamation {
             bindings = <&kp LS(N1)>;
-            key-positions = <36 37 38 39>;
+            key-positions = <36 37 38>;
         };
 
         asterisk {
@@ -286,7 +286,7 @@
 
         at {
             bindings = <&kp LS(NUMBER_2)>;
-            key-positions = <7 8 10 9>;
+            key-positions = <8 9 10>;
         };
 
         caret {
