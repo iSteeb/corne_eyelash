@@ -329,6 +329,8 @@
         macro_euro: macro_euro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings = <&macro_press &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp NUMBER_2>, <&macro_release &kp LALT>, <&macro_release &kp LSHFT>;
         };
 
@@ -347,7 +349,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHIFT>, <&macro_tap &kp A>, <&macro_release &kp LSHIFT>;
+            bindings = <&macro_release &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp A>, <&macro_release &kp LSHFT>;
         };
 
         // lower ö (⌥ + U, then O)
@@ -365,7 +367,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHIFT>, <&macro_tap &kp O>, <&macro_release &kp LSHIFT>;
+            bindings = <&macro_release &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp O>, <&macro_release &kp LSHFT>;
         };
 
         // lower ü (⌥ + U, then U)
@@ -383,7 +385,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHIFT>, <&macro_tap &kp U>, <&macro_release &kp LSHIFT>;
+            bindings = <&macro_release &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp U>, <&macro_release &kp LSHFT>;
         };
 
         // ß (⌥ + S)
@@ -408,7 +410,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp N>, <&macro_release &kp LALT>, <&macro_press &kp LSHIFT>, <&macro_tap &kp N>, <&macro_release &kp LSHIFT>;
+            bindings = <&macro_release &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp N>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp N>, <&macro_release &kp LSHFT>;
         };
 
         pair_parentheses: pair_parentheses {
