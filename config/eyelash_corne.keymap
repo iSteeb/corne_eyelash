@@ -40,7 +40,7 @@
             de_oe { sequence = <O E>; bindings = <&kp RALT(P)>; };
             de_ue { sequence = <U E>; bindings = <&kp RALT(Y)>; };
             de_ss { sequence = <U E>; bindings = <&kp RALT(S)>; };
-
+            es_nn { sequence = <N N>; bindings = <&kp RALT(N)>; };
             volei {
                 sequence = <P A S S>;
                 bindings = <&volei>;
