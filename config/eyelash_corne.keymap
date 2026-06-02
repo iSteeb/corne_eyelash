@@ -36,28 +36,48 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
+            ignore-keys = <LSHFT RSHFT>;
 
-            // Lowercase German Umlauts
-            seq_de_ae     { sequence = <A E>; bindings = <&macro_de_ae>; };
-            seq_de_oe     { sequence = <O E>; bindings = <&macro_de_oe>; };
-            seq_de_ue     { sequence = <U E>; bindings = <&macro_de_ue>; };
-
-            // Uppercase German Umlauts
-            seq_de_ae_cap { sequence = <LS(A) LS(E)>; bindings = <&macro_de_ae_cap>; };
-            seq_de_oe_cap { sequence = <LS(O) LS(E)>; bindings = <&macro_de_oe_cap>; };
-            seq_de_ue_cap { sequence = <LS(U) LS(E)>; bindings = <&macro_de_ue_cap>; };
-
-            // Eszett
-            seq_de_ss     { sequence = <S S>; bindings = <&macro_de_ss>; };
-
-            // Spanish Enne
-            seq_es_nn     { sequence = <N N>; bindings = <&macro_es_nn>; };
-            seq_es_nn_cap { sequence = <LS(N) LS(N)>; bindings = <&macro_es_nn_cap>; };
+            de_ae     { sequence = <A E>; bindings = <&mm_de_ae>; };
+            de_oe     { sequence = <O E>; bindings = <&mm_de_oe>; };
+            de_ue     { sequence = <U E>; bindings = <&mm_de_ue>; };
+            de_ss     { sequence = <S S>; bindings = <&macro_de_ss>; };
+            es_nn     { sequence = <N N>; bindings = <&mm_es_nn>; };
 
             volei {
                 sequence = <A C C>;
                 bindings = <&volei>;
             };
+        };
+
+        /* Umlaut/Ñ mod-morphs: lowercase when unshifted, uppercase when shift held */
+        mm_de_ae: mm_de_ae {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_DE_AE";
+            #binding-cells = <0>;
+            bindings = <&macro_de_ae>, <&macro_de_ae_cap>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_de_oe: mm_de_oe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_DE_OE";
+            #binding-cells = <0>;
+            bindings = <&macro_de_oe>, <&macro_de_oe_cap>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_de_ue: mm_de_ue {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_DE_UE";
+            #binding-cells = <0>;
+            bindings = <&macro_de_ue>, <&macro_de_ue_cap>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_es_nn: mm_es_nn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_ES_NN";
+            #binding-cells = <0>;
+            bindings = <&macro_es_nn>, <&macro_es_nn_cap>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         dollar_euro: dollar_euro {
