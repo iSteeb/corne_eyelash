@@ -36,48 +36,22 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            ignore-keys = <LSHFT RSHFT>;
 
-            de_ae     { sequence = <A E>; bindings = <&mm_de_ae>; };
-            de_oe     { sequence = <O E>; bindings = <&mm_de_oe>; };
-            de_ue     { sequence = <U E>; bindings = <&mm_de_ue>; };
+            de_ae     { sequence = <A E>; bindings = <&macro_de_ae>; };
+            de_oe     { sequence = <O E>; bindings = <&macro_de_oe>; };
+            de_ue     { sequence = <U E>; bindings = <&macro_de_ue>; };
             de_ss     { sequence = <S S>; bindings = <&macro_de_ss>; };
-            es_nn     { sequence = <N N>; bindings = <&mm_es_nn>; };
+            es_nn     { sequence = <N N>; bindings = <&macro_es_nn>; };
+
+            de_ae_cap { sequence = <A I>; bindings = <&macro_de_ae_cap>; };
+            de_oe_cap { sequence = <O I>; bindings = <&macro_de_oe_cap>; };
+            de_ue_cap { sequence = <U I>; bindings = <&macro_de_ue_cap>; };
+            es_nn_cap { sequence = <N I>; bindings = <&macro_es_nn_cap>; };
 
             volei {
                 sequence = <A C C>;
                 bindings = <&volei>;
             };
-        };
-
-        /* Umlaut/Ñ mod-morphs: lowercase when unshifted, uppercase when shift held */
-        mm_de_ae: mm_de_ae {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_DE_AE";
-            #binding-cells = <0>;
-            bindings = <&macro_de_ae>, <&macro_de_ae_cap>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        mm_de_oe: mm_de_oe {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_DE_OE";
-            #binding-cells = <0>;
-            bindings = <&macro_de_oe>, <&macro_de_oe_cap>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        mm_de_ue: mm_de_ue {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_DE_UE";
-            #binding-cells = <0>;
-            bindings = <&macro_de_ue>, <&macro_de_ue_cap>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        mm_es_nn: mm_es_nn {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_ES_NN";
-            #binding-cells = <0>;
-            bindings = <&macro_es_nn>, <&macro_es_nn_cap>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         dollar_euro: dollar_euro {
@@ -329,8 +303,8 @@
         macro_euro: macro_euro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings = <&macro_press &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp NUMBER_2>, <&macro_release &kp LALT>, <&macro_release &kp LSHFT>;
         };
 
@@ -343,13 +317,12 @@
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_tap &kp A>;
         };
 
-        // Upper Ä (⌥ + U, then ⇧ + A)
         macro_de_ae_cap: macro_de_ae_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_release &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp A>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp A>, <&macro_release &kp LSHFT>;
         };
 
         // lower ö (⌥ + U, then O)
@@ -361,13 +334,12 @@
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_tap &kp O>;
         };
 
-        // Upper Ö (⌥ + U, then ⇧ + O)
         macro_de_oe_cap: macro_de_oe_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_release &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp O>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp O>, <&macro_release &kp LSHFT>;
         };
 
         // lower ü (⌥ + U, then U)
@@ -379,13 +351,12 @@
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_tap &kp U>;
         };
 
-        // Upper Ü (⌥ + U, then ⇧ + U)
         macro_de_ue_cap: macro_de_ue_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_release &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp U>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp U>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp U>, <&macro_release &kp LSHFT>;
         };
 
         // ß (⌥ + S)
@@ -404,13 +375,12 @@
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp N>, <&macro_release &kp LALT>, <&macro_tap &kp N>;
         };
 
-        // Upper Ñ (⌥ + N, then ⇧ + N)
         macro_es_nn_cap: macro_es_nn_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_release &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp N>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp N>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp N>, <&macro_release &kp LALT>, <&macro_press &kp LSHFT>, <&macro_tap &kp N>, <&macro_release &kp LSHFT>;
         };
 
         pair_parentheses: pair_parentheses {
