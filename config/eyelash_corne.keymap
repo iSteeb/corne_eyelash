@@ -50,7 +50,7 @@
         dollar_euro: dollar_euro {
             compatible = "zmk,behavior-mod-morph";
             label = "DOLLAR_EURO";
-            bindings = <&kp LS(NUMBER_4)>, &kp RALT(NUMBER_5)>;
+            bindings = <&kp LS(NUMBER_4)>, <&kp RALT(NUMBER_5)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
