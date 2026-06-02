@@ -297,31 +297,31 @@
         macro_de_ae: macro_de_ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RALT(Q)>;
+            bindings = <&macro_press &kp RALT>, <&macro_tap &kp Q>, <&macro_release &kp RALT>;
         };
 
         macro_de_oe: macro_de_oe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RALT(P)>;
+            bindings = <&macro_press &kp RALT>, <&macro_tap &kp P>, <&macro_release &kp RALT>;
         };
 
         macro_de_ue: macro_de_ue {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RALT(Y)>;
+            bindings = <&macro_press &kp RALT>, <&macro_tap &kp Y>, <&macro_release &kp RALT>;
         };
 
         macro_de_ss: macro_de_ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RALT(S)>;
+            bindings = <&macro_press &kp RALT>, <&macro_tap &kp S>, <&macro_release &kp RALT>;
         };
 
         macro_es_nn: macro_es_nn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RALT(N)>;
+            bindings = <&macro_press &kp RALT>, <&macro_tap &kp N>, <&macro_release &kp RALT>;
         };
 
         pair_parentheses: pair_parentheses {
