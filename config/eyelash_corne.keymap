@@ -36,10 +36,6 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            de_ae {
-                sequence = <A E>;
-                bindings = <&kp RALT(Q)>;
-            };
 
             de_ae { sequence = <A E>; bindings = <&macro_de_ae>; };
             de_oe { sequence = <O E>; bindings = <&macro_de_oe>; };
