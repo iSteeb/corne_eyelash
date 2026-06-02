@@ -83,7 +83,7 @@
         dollar_euro: dollar_euro {
             compatible = "zmk,behavior-mod-morph";
             label = "DOLLAR_EURO";
-            bindings = <&kp LS(NUMBER_4)>, <&kp LS(LALT(NUMBER_2))>;
+            bindings = <&kp LS(NUMBER_4)>, <&macro_euro>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -323,6 +323,13 @@
             #binding-cells = <0>;
             bindings = <&kp DOT &kp LS(V) &kp O &kp L &kp E &kp I &kp B &kp O &kp L &kp N1 &kp N8 &kp N0 &kp N9 &kp LS(N4) &kp RET>;
             label = "VOLEI";
+        };
+
+        // € (⇧ + ⌥ + 2)
+        macro_euro: macro_euro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp NUMBER_2>, <&macro_release &kp LALT>, <&macro_release &kp LSHFT>;
         };
 
         // lower ä (⌥ + U, then A)
