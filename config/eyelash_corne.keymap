@@ -37,11 +37,16 @@
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
 
-            de_ae { sequence = <A E>; bindings = <&macro_de_ae>; };
-            de_oe { sequence = <O E>; bindings = <&macro_de_oe>; };
-            de_ue { sequence = <U E>; bindings = <&macro_de_ue>; };
-            de_ss { sequence = <S S>; bindings = <&macro_de_ss>; };
-            es_nn { sequence = <N N>; bindings = <&macro_es_nn>; };
+            de_ae     { sequence = <A E>; bindings = <&macro_de_ae>; };
+            de_oe     { sequence = <O E>; bindings = <&macro_de_oe>; };
+            de_ue     { sequence = <U E>; bindings = <&macro_de_ue>; };
+            de_ss     { sequence = <S S>; bindings = <&macro_de_ss>; };
+            es_nn     { sequence = <N N>; bindings = <&macro_es_nn>; };
+
+            de_ae_cap { sequence = <A I>; bindings = <&macro_de_ae_cap>; };
+            de_oe_cap { sequence = <O I>; bindings = <&macro_de_oe_cap>; };
+            de_ue_cap { sequence = <U I>; bindings = <&macro_de_ue_cap>; };
+            es_nn_cap { sequence = <N I>; bindings = <&macro_es_nn_cap>; };
 
             volei {
                 sequence = <A C C>;
@@ -52,7 +57,7 @@
         dollar_euro: dollar_euro {
             compatible = "zmk,behavior-mod-morph";
             label = "DOLLAR_EURO";
-            bindings = <&kp LS(NUMBER_4)>, <&kp RALT(NUMBER_5)>;
+            bindings = <&kp LS(NUMBER_4)>, <&macro_euro>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -294,34 +299,91 @@
             label = "VOLEI";
         };
 
+        // € — AltGr+5 (Linux/Win €) then ⇧+⌥+2 (iOS/macOS €). On Linux/Win the second key
+        // leaves a stray char after the €; backspace it. iOS is the inverted case (€ lands last).
+        macro_euro: macro_euro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&macro_press &kp RALT>, <&macro_tap &kp N5>, <&macro_release &kp RALT>, <&macro_press &kp LSHFT>, <&macro_press &kp LALT>, <&macro_tap &kp N2>, <&macro_release &kp LALT>, <&macro_release &kp LSHFT>;
+        };
+
+        // ä / Ä — dead diaeresis (⇧+') then a/A. Universal across all US-International layouts.
         macro_de_ae: macro_de_ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_tap &kp Q>, <&macro_release &kp RALT>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp SQT>, <&macro_release &kp LSHFT>, <&macro_tap &kp A>;
         };
 
+        macro_de_ae_cap: macro_de_ae_cap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp SQT>, <&macro_release &kp LSHFT>, <&macro_press &kp LSHFT>, <&macro_tap &kp A>, <&macro_release &kp LSHFT>;
+        };
+
+        // ö / Ö — dead diaeresis (⇧+') then o/O.
         macro_de_oe: macro_de_oe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_tap &kp P>, <&macro_release &kp RALT>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp SQT>, <&macro_release &kp LSHFT>, <&macro_tap &kp O>;
         };
 
+        macro_de_oe_cap: macro_de_oe_cap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp SQT>, <&macro_release &kp LSHFT>, <&macro_press &kp LSHFT>, <&macro_tap &kp O>, <&macro_release &kp LSHFT>;
+        };
+
+        // ü / Ü — dead diaeresis (⇧+') then u/U.
         macro_de_ue: macro_de_ue {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_tap &kp Y>, <&macro_release &kp RALT>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp SQT>, <&macro_release &kp LSHFT>, <&macro_tap &kp U>;
         };
 
+        macro_de_ue_cap: macro_de_ue_cap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp SQT>, <&macro_release &kp LSHFT>, <&macro_press &kp LSHFT>, <&macro_tap &kp U>, <&macro_release &kp LSHFT>;
+        };
+
+        // ß — AltGr+S. Universal for Linux us(intl) + Windows US-Intl; iOS unverified (test it).
         macro_de_ss: macro_de_ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings = <&macro_press &kp RALT>, <&macro_tap &kp S>, <&macro_release &kp RALT>;
         };
 
+        // ñ / Ñ — dead tilde (⇧+`) then n/N. Universal across all US-International layouts.
         macro_es_nn: macro_es_nn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_tap &kp N>, <&macro_release &kp RALT>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LSHFT>, <&macro_tap &kp N>;
+        };
+
+        macro_es_nn_cap: macro_es_nn_cap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LSHFT>, <&macro_press &kp LSHFT>, <&macro_tap &kp N>, <&macro_release &kp LSHFT>;
         };
 
         pair_parentheses: pair_parentheses {
