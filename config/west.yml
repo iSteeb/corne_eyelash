@@ -15,7 +15,7 @@ manifest:
       import: app/west.yml
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
-      revision: main
+      revision: d6e05a1  # last commit before the board→shield restructure (20ca19a, 2026-06-05) removed boards/arm/eyelash_corne
     - name: zmk-leader-key
       remote: urob
       revision: v0.3
