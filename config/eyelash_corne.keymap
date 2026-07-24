@@ -97,15 +97,6 @@
             tapping-term-ms = <400>;
         };
 
-        pair_squares_braces: pair_squares_braces {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PAIR_SQUARES_BRACES";
-            bindings = <&pair_squares>, <&pair_braces>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         comma_semi: comma_semi {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_SEMI";
