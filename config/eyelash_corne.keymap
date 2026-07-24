@@ -283,6 +283,13 @@
                 <&macro_release>,
                 <&kp RALT>;
         };
+
+        macro_vim_x: macro_vim_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &kp COLON &kp X &kp ENTER>;
+            label = "MACRO_VIM_X";
+        };
     };
 
     keymap {
