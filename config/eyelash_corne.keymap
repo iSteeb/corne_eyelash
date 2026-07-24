@@ -88,15 +88,6 @@
             };
         };
 
-        dollar_euro: dollar_euro {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOLLAR_EURO";
-            bindings = <&kp LS(NUMBER_4)>, <&macro_euro>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         hold_tap_kp_kp: hold_tap_kp_kp {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_KP_KP";
@@ -142,11 +133,6 @@
             key-positions = <1 0>;
         };
 
-        leader {
-            bindings = <&leader>;
-            key-positions = <18 17>;
-        };
-
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <23 24>;
@@ -170,7 +156,7 @@
 
         backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <38 23>;
+            key-positions = <22 37>;
             layers = <0>;
         };
 
@@ -186,7 +172,7 @@
 
         backtic {
             bindings = <&kp GRAVE>;
-            key-positions = <22 37>;
+            key-positions = <23 38>;
         };
 
         tilde {
@@ -221,27 +207,17 @@
 
         close_parentheses {
             bindings = <&kp LS(N0)>;
-            key-positions = <3 2>;
-        };
-
-        parentheses_pair {
-            bindings = <&pair_parentheses>;
-            key-positions = <2 3 4>;
+            key-positions = <4 5>;
         };
 
         open_brackets {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <16 17>;
+            key-positions = <31 32>;
         };
 
         close_brackets {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <15 16>;
-        };
-
-        brackets_pair {
-            bindings = <&pair_squares_braces>;
-            key-positions = <15 16 17>;
+            key-positions = <32 33>;
         };
 
         and {
@@ -249,8 +225,8 @@
             key-positions = <8 9 7>;
         };
 
-        dollar_euro {
-            bindings = <&dollar_euro>;
+        dollar {
+            bindings = <&kp LS(NUMBER_4)>;
             key-positions = <9 10>;
         };
 
@@ -286,17 +262,12 @@
 
         angled_open {
             bindings = <&kp LS(COMMA)>;
-            key-positions = <32 31>;
+            key-positions = <16 17>;
         };
 
         angled_close {
             bindings = <&kp LS(DOT)>;
-            key-positions = <30 31>;
-        };
-
-        angled_pair {
-            bindings = <&pair_angled>;
-            key-positions = <30 31 32>;
+            key-positions = <17 18>;
         };
 
         plus {
@@ -305,14 +276,9 @@
             layers = <0>;
         };
 
-        raise {
-            bindings = <&mo 1>;
-            key-positions = <4 5>;
-        };
-
-        lower {
-            bindings = <&mo 2>;
-            key-positions = <32 33>;
+        euro {
+            bindings = <&macro_euro>;
+            key-positions = <9 10 11>;
         };
     };
 
@@ -518,34 +484,6 @@
                 <&macro_release>,
                 <&kp LSHFT>;
         };
-
-        pair_parentheses: pair_parentheses {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N9) &kp LS(N0) &kp LEFT>;
-            label = "PAIR_PARENTHESES";
-        };
-
-        pair_squares: pair_squares {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
-            label = "PAIR_SQUARES";
-        };
-
-        pair_braces: pair_braces {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
-            label = "PAIR_BRACES";
-        };
-
-        pair_angled: pair_angled {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(COMMA) &kp LS(DOT) &kp LEFT>;
-            label = "PAIR_ANGLED";
-        };
     };
 
     keymap {
@@ -554,9 +492,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E      &kp R      &kp T                                 &kp UP                &kp Y  &kp U      &kp I             &kp O             &kp P             &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(LS(LA(LC(S))))
-&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &kp LEFT  &kp LC(L)  &kp RIGHT  &kp H  &kp J      &kp K             &kp L             &kp LG(QUESTION)  &hold_tap_kp_kp END HOME
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B     &kt LEFT_SHIFT              &kp DOWN              &kp N  &kp M      &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans
+&leader         &kp Q  &kp W  &kp E      &kp R      &kp T                                 &kp UP                &kp Y  &kp U      &kp I    &kp O             &kp P             &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(LS(LA(LC(S))))
+&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &kp LEFT  &kp LC(L)  &kp RIGHT  &kp H  &kp J      &kp K    &kp L             &kp LG(QUESTION)  &hold_tap_kp_kp END HOME
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B     &kt LEFT_SHIFT              &kp DOWN              &kp N  &kp M      &kp TAB  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)
                               &kp LCTRL  &kp SPACE  &kp LGUI                                                    &mo 1  &kp ENTER  &mo 2
             >;
 
@@ -566,10 +504,10 @@
         raise {
             display-name = "NUMBERS";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-                        &trans  &trans  &trans                                                             &trans  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &kp PAGE_UP             &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &kp HOME  &kp INSERT     &kp END  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans              &kp PAGE_DOWN           &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+                        &trans  &trans  &trans                                              &trans  &kp N0  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP>;
@@ -578,20 +516,20 @@
         lower {
             display-name = "SHORTCUTS";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                      &kp PG_UP           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &kp HOME  &kp INS    &kp END  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans              &kp PG_DN           &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                          &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &mmv MOVE_UP                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_DOWN                   &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                                             &trans  &trans  &trans
             >;
         };
 
         adjust {
             display-name = "FUNCTIONS";
             bindings = <
-&none  &none  &none  &none  &none  &none                              &kp C_BRIGHTNESS_INC                   &kp F12  &kp F7      &kp F8  &kp F9  &rgb_ug RGB_TOG  &kp LC(LA(DELETE))
-&none  &none  &none  &none  &none  &none           &kp C_VOLUME_DOWN  &kp K_MUTE            &kp C_VOLUME_UP  &kp F11  &kp F4      &kp F5  &kp F6  &bt BT_CLR       &kp LA(LC(INSERT))
-&none  &none  &none  &none  &none  &none  &none                       &kp C_BRIGHTNESS_DEC                   &kp F10  &kp F1      &kp F2  &kp F3  &trans           &kp LC(LS(ESCAPE))
-                     &none  &none  &none                                                                     &trans   &bt BT_NXT  &trans
+&none  &none  &none  &none   &none   &none                                  &kp C_BRIGHTNESS_INC                 &kp F12  &kp F7      &kp F8  &kp F9  &trans  &kp LC(LA(DELETE))
+&none  &none  &none  &none   &none   &none                 &rgb_ug RGB_TOG  &bt BT_CLR            &bt BT_DISC 1  &kp F11  &kp F4      &kp F5  &kp F6  &trans  &kp LA(LC(INSERT))
+&none  &none  &none  &none   &none   &none   &kp K_MUTE                     &kp C_BRIGHTNESS_DEC                 &kp F10  &kp F1      &kp F2  &kp F3  &trans  &kp LC(LS(ESCAPE))
+                     &trans  &trans  &trans                                                                      &trans   &bt BT_NXT  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
