@@ -46,6 +46,16 @@
                 sequence = <V V V>;
                 bindings = <&volei>;
             };
+
+            vim_x {
+                sequence = <X X>;
+                bindings = <&macro_vim_x>;
+            };
+
+            vim_sudo_x {
+                sequence = <S X X>;
+                bindings = <&macro_vim_sudo_x>;
+            };
         };
 
         hold_tap_kp_kp: hold_tap_kp_kp {
@@ -288,6 +298,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp ESC &kp COLON &kp X &kp ENTER>;
+            label = "MACRO_VIM_X";
+        };
+
+        macro_vim_sudo_x: macro_vim_sudo_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &kp COLON &kp W &kp SPACE &kp LS(N1) &kp S &kp U &kp D &kp O &kp SPACE &kp T &kp E &kp E &kp SPACE &kp LS(N5) &kp SPACE &kp LS(DOT) &kp SLASH &kp D &kp E &kp V &kp SLASH &kp N &kp U &kp L &kp L &kp ENTER>;
             label = "MACRO_VIM_X";
         };
     };
