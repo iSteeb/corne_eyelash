@@ -305,7 +305,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp ESC &kp COLON &kp W &kp SPACE &kp LS(N1) &kp S &kp U &kp D &kp O &kp SPACE &kp T &kp E &kp E &kp SPACE &kp LS(N5) &kp SPACE &kp LS(DOT) &kp SLASH &kp D &kp E &kp V &kp SLASH &kp N &kp U &kp L &kp L &kp ENTER>;
-            label = "MACRO_VIM_X";
+            label = "MACRO_VIM_SUDO_X";
         };
     };
 
