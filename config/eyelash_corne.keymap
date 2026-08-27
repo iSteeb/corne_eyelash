@@ -101,7 +101,7 @@
 
         del {
             bindings = <&kp DELETE>;
-            key-positions = <24 25>;
+            key-positions = <24 25 23>;
         };
 
         minus_underscore {
@@ -123,7 +123,7 @@
 
         pipe {
             bindings = <&kp LS(BACKSLASH)>;
-            key-positions = <37 23>;
+            key-positions = <23 7>;
         };
 
         slash {
@@ -132,13 +132,13 @@
         };
 
         backtic {
-            bindings = <&kp GRAVE>;
-            key-positions = <23 38>;
+            bindings = <&backtick_force>;
+            key-positions = <23 7>;
         };
 
         tilde {
             bindings = <&kp LS(GRAVE)>;
-            key-positions = <37 24 10>;
+            key-positions = <37 8 23>;
         };
 
         single_quote {
@@ -211,14 +211,14 @@
             key-positions = <8 9 10>;
         };
 
-        caret {
+        caret_force {
             bindings = <&kp LS(NUMBER_6)>;
             key-positions = <23 9 25>;
         };
 
         hash {
             bindings = <&kp LS(NUMBER_3)>;
-            key-positions = <37 24 39>;
+            key-positions = <22 7>;
         };
 
         angled_open {
@@ -244,12 +244,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <24 25 23>;
-        };
-
-        double_quote {
-            bindings = <&double_quote_force>;
-            key-positions = <22 7>;
+            key-positions = <24 25>;
         };
 
         quotes {
@@ -259,7 +254,7 @@
 
         tilde_force {
             bindings = <&tilde_force>;
-            key-positions = <37 24>;
+            key-positions = <23 37>;
         };
     };
 
@@ -354,6 +349,20 @@
             #binding-cells = <0>;
             bindings = <&kp LS(GRAVE) &kp SPACE>;
             label = "TILDE_FORCE";
+        };
+
+        backtick_force: backtick_force {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp SPACE>;
+            label = "BACKTICK_FORCE";
+        };
+
+        caret_force: caret_force {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_6) &kp SPACE>;
+            label = "CARET_FORCE";
         };
     };
 
