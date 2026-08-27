@@ -47,6 +47,11 @@
                 bindings = <&volei>;
             };
 
+            duzie {
+                sequence = <D D D>;
+                bindings = <&duzie>;
+            };
+
             vim_x {
                 sequence = <X X>;
                 bindings = <&macro_vim_x>;
@@ -104,9 +109,15 @@
             key-positions = <24 25 23>;
         };
 
-        minus_underscore {
-            bindings = <&kp MINUS>;
-            key-positions = <36 37>;
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <24 25>;
+        };
+
+        plus {
+            bindings = <&kp LS(EQUAL)>;
+            key-positions = <7 8>;
+            layers = <0>;
         };
 
         equals {
@@ -115,20 +126,30 @@
             layers = <0>;
         };
 
+        minus_underscore {
+            bindings = <&kp MINUS>;
+            key-positions = <36 37>;
+        };
+
+        slash {
+            bindings = <&kp SLASH>;
+            key-positions = <36 23>;
+        };
+
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <22 37>;
             layers = <0>;
         };
 
+        and {
+            bindings = <&kp LS(N7)>;
+            key-positions = <22 8>;
+        };
+
         pipe {
             bindings = <&kp LS(BACKSLASH)>;
             key-positions = <23 7>;
-        };
-
-        slash {
-            bindings = <&kp SLASH>;
-            key-positions = <36 23>;
         };
 
         backtic {
@@ -161,31 +182,6 @@
             key-positions = <38 37>;
         };
 
-        open_parentheses {
-            bindings = <&kp LS(N9)>;
-            key-positions = <3 4>;
-        };
-
-        close_parentheses {
-            bindings = <&kp LS(N0)>;
-            key-positions = <4 5>;
-        };
-
-        open_brackets {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 32>;
-        };
-
-        close_brackets {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <32 33>;
-        };
-
-        and {
-            bindings = <&kp LS(N7)>;
-            key-positions = <22 8>;
-        };
-
         dollar {
             bindings = <&kp LS(NUMBER_4)>;
             key-positions = <9 8>;
@@ -216,9 +212,44 @@
             key-positions = <23 9 25>;
         };
 
+        tilde_force {
+            bindings = <&tilde_force>;
+            key-positions = <23 37>;
+        };
+
         hash {
             bindings = <&kp LS(NUMBER_3)>;
             key-positions = <22 7>;
+        };
+
+        euro {
+            bindings = <&macro_euro>;
+            key-positions = <9 10>;
+        };
+
+        quotes {
+            bindings = <&kp APOSTROPHE>;
+            key-positions = <36 22 7>;
+        };
+
+        open_parentheses {
+            bindings = <&kp LS(N9)>;
+            key-positions = <3 4>;
+        };
+
+        close_parentheses {
+            bindings = <&kp LS(N0)>;
+            key-positions = <4 5>;
+        };
+
+        open_brackets {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <31 32>;
+        };
+
+        close_brackets {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <32 33>;
         };
 
         angled_open {
@@ -229,32 +260,6 @@
         angled_close {
             bindings = <&kp LS(DOT)>;
             key-positions = <17 18>;
-        };
-
-        plus {
-            bindings = <&kp LS(EQUAL)>;
-            key-positions = <7 8>;
-            layers = <0>;
-        };
-
-        euro {
-            bindings = <&macro_euro>;
-            key-positions = <9 10>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <24 25>;
-        };
-
-        quotes {
-            bindings = <&kp APOSTROPHE>;
-            key-positions = <36 22 7>;
-        };
-
-        tilde_force {
-            bindings = <&tilde_force>;
-            key-positions = <23 37>;
         };
     };
 
