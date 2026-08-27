@@ -101,7 +101,7 @@
 
         del {
             bindings = <&kp DELETE>;
-            key-positions = <23 24 25>;
+            key-positions = <24 25>;
         };
 
         minus_underscore {
@@ -111,7 +111,7 @@
 
         equals {
             bindings = <&kp EQUAL>;
-            key-positions = <7 8>;
+            key-positions = <22 23>;
             layers = <0>;
         };
 
@@ -138,11 +138,11 @@
 
         tilde {
             bindings = <&kp LS(GRAVE)>;
-            key-positions = <37 24>;
+            key-positions = <37 24 10>;
         };
 
-        quotes {
-            bindings = <&kp SQT>;
+        single_quote {
+            bindings = <&single_quote_force>;
             key-positions = <36 22>;
         };
 
@@ -183,12 +183,12 @@
 
         and {
             bindings = <&kp LS(N7)>;
-            key-positions = <8 9 7>;
+            key-positions = <22 8>;
         };
 
         dollar {
             bindings = <&kp LS(NUMBER_4)>;
-            key-positions = <9 10>;
+            key-positions = <9 8>;
         };
 
         exclamation {
@@ -198,12 +198,12 @@
 
         asterisk {
             bindings = <&kp LS(N8)>;
-            key-positions = <22 23 24>;
+            key-positions = <7 8 9>;
         };
 
         percent {
             bindings = <&kp LS(N5)>;
-            key-positions = <22 23 24 25>;
+            key-positions = <22 23 24>;
         };
 
         at {
@@ -233,13 +233,33 @@
 
         plus {
             bindings = <&kp LS(EQUAL)>;
-            key-positions = <22 23>;
+            key-positions = <7 8>;
             layers = <0>;
         };
 
         euro {
             bindings = <&macro_euro>;
-            key-positions = <9 10 11>;
+            key-positions = <9 10>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <24 25 23>;
+        };
+
+        double_quote {
+            bindings = <&double_quote_force>;
+            key-positions = <22 7>;
+        };
+
+        quotes {
+            bindings = <&kp APOSTROPHE>;
+            key-positions = <36 22 7>;
+        };
+
+        tilde_force {
+            bindings = <&tilde_force>;
+            key-positions = <37 24>;
         };
     };
 
@@ -307,6 +327,34 @@
             bindings = <&kp ESC &kp COLON &kp W &kp SPACE &kp LS(N1) &kp S &kp U &kp D &kp O &kp SPACE &kp T &kp E &kp E &kp SPACE &kp LS(N5) &kp SPACE &kp LS(DOT) &kp SLASH &kp D &kp E &kp V &kp SLASH &kp N &kp U &kp L &kp L &kp ENTER>;
             label = "MACRO_VIM_SUDO_X";
         };
+
+        duzie: duzie {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp Y &kp LS(Z) &kp N &kp Y &kp C &kp MINUS &kp C &kp I &kp S &kp M &kp Y &kp N1 &kp MINUS &kp J &kp I &kp Q &kp J &kp I &kp X>;
+            label = "DUZIE";
+        };
+
+        single_quote_force: single_quote_force {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SPACE>;
+            label = "SINGLE_QUOTE_FORCE";
+        };
+
+        double_quote_force: double_quote_force {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SQT) &kp SPACE>;
+            label = "DOUBLE_QUOTE_FORCE";
+        };
+
+        tilde_force: tilde_force {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(GRAVE) &kp SPACE>;
+            label = "TILDE_FORCE";
+        };
     };
 
     keymap {
@@ -315,9 +363,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&leader         &kp Q  &kp W  &kp E      &kp R      &kp T                                 &kp UP                &kp Y  &kp U      &kp I    &kp O             &kp P             &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(LS(LA(LC(S))))
-&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &kp LEFT  &kp LC(L)  &kp RIGHT  &kp H  &kp J      &kp K    &kp L             &kp LG(QUESTION)  &hold_tap_kp_kp END HOME
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B     &kt LEFT_SHIFT              &kp DOWN              &kp N  &kp M      &kp TAB  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)
+&leader         &kp Q  &kp W  &kp E      &kp R      &kp T                                 &kp UP                &kp Y  &kp U      &kp I   &kp O     &kp P     &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(QUESTION)
+&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &kp LEFT  &kp LC(L)  &kp RIGHT  &kp H  &kp J      &kp K   &kp L     &kp UP    &hold_tap_kp_kp END HOME
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B     &kt LEFT_SHIFT              &kp DOWN              &kp N  &kp M      &trans  &kp LEFT  &kp DOWN  &kp RIGHT
                               &kp LCTRL  &kp SPACE  &kp LGUI                                                    &mo 1  &kp ENTER  &mo 2
             >;
 
