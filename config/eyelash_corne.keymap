@@ -149,7 +149,7 @@
 
         pipe {
             bindings = <&kp LS(BACKSLASH)>;
-            key-positions = <23 7>;
+            key-positions = <23 8>;
         };
 
         backtic {
@@ -208,7 +208,7 @@
         };
 
         caret_force {
-            bindings = <&kp LS(NUMBER_6)>;
+            bindings = <&caret_force>;
             key-positions = <23 9 25>;
         };
 
