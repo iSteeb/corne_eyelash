@@ -57,9 +57,29 @@
                 bindings = <&macro_vim_x>;
             };
 
-            vim_sudo_x {
-                sequence = <S X X>;
-                bindings = <&macro_vim_sudo_x>;
+            steven_duzie {
+                sequence = <D U Z>;
+                bindings = <&steven_duzie>;
+            };
+            
+            mac_to_colon {
+                sequence = <M A C C>;
+                bindings = <&mac_to_colon>;
+            };
+            
+            mac_to_dash {
+                sequence = <M A C D>;
+                bindings = <&mac_to_dash>;
+            };
+            
+            iow_long {
+                sequence = <I O W L>;
+                bindings = <&iow_long>;
+            };
+            
+            iow_short {
+                sequence = <I O W S>;
+                bindings = <&iow_short>;
             };
         };
 
