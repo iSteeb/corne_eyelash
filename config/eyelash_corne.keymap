@@ -403,14 +403,14 @@
         mac_to_colon: mac_to_colon {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp LS(SEMICOLON)>;
+            bindings = <&kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp LS(SEMICOLON) &kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp LS(SEMICOLON) &kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp LS(SEMICOLON) &kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp LS(SEMICOLON) &kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp LS(SEMICOLON) >;
             label = "MAC_TO_COLON";
         };
 
         mac_to_dash: mac_to_dash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp MINUS>;
+            bindings = <&kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp MINUS &kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp MINUS &kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp MINUS &kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp MINUS &kp LEFT_ARROW &kp LEFT &kp BACKSPACE &kp MINUS >;
             label = "MAC_TO_DASH";
         };
 
