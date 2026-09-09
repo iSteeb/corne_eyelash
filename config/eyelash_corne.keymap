@@ -127,6 +127,18 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
         };
+
+        lgui_nums: lgui_nums {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LGUI_NUMS";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(NUMBER_1)>,
+                <&kp LG(NUMBER_2)>,
+                <&kp LG(NUMBER_3)>,
+                <&kp LG(NUMBER_4)>,
+                <&kp LG(N5)>;
+        };
     };
 
     combos {
@@ -445,7 +457,7 @@
             display-name = "QWERTY";
             bindings = <
 &leader         &kp Q  &kp W  &kp E      &kp R      &kp T                                 &kp UP                &kp Y  &kp U                 &kp I   &kp O   &kp P   &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(QUESTION)
-&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &kp LEFT  &kp LC(L)  &kp RIGHT  &kp H  &kp J                 &kp K   &kp L   &trans  &hold_tap_kp_kp END HOME
+&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &kp LEFT  &kp LC(L)  &kp RIGHT  &kp H  &kp J                 &kp K   &kp L   &trans  &lgui_nums
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B     &kt LEFT_SHIFT              &kp DOWN              &kp N  &kp M                 &trans  &trans  &trans  &trans
                               &kp LCTRL  &kp SPACE  &kp LGUI                                                    &mo 3  &enter_layer 1 ENTER  &mo 2
             >;
