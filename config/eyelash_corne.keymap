@@ -125,7 +125,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
         };
 
         lgui_nums: lgui_nums {
