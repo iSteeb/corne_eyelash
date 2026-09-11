@@ -125,7 +125,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <100>;
         };
 
         lgui_nums: lgui_nums {
@@ -138,15 +138,6 @@
                 <&kp LG(NUMBER_3)>,
                 <&kp LG(NUMBER_4)>,
                 <&kp LG(N5)>;
-        };
-
-        hold_tap_tog_mo: hold_tap_tog_mo {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_TOG_MO";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
         };
     };
 
@@ -465,21 +456,33 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&leader         &kp Q  &kp W  &kp E      &kp R      &kp T                                 &kp UP                 &kp Y                 &kp U                 &kp I   &kp O   &kp P   &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(QUESTION)
-&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &kp LEFT  &kp RETURN  &kp RIGHT  &kp H                 &kp J                 &kp K   &kp L   &trans  &lgui_nums
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B     &kt LEFT_SHIFT              &kp DOWN               &kp N                 &kp M                 &trans  &trans  &trans  &bt BT_DISC 4
-                              &kp LCTRL  &kp SPACE  &kp LGUI                                                     &hold_tap_tog_mo 3 3  &enter_layer 1 ENTER  &mo 2
+&leader         &kp Q  &kp W  &kp E      &kp R      &kp T                                 &kp UP                 &kp Y  &kp U                 &kp I   &kp O   &kp P   &hold_tap_kp_kp LC(LS(LA(LEFT_GUI))) LG(QUESTION)
+&kp LALT        &kp A  &kp S  &kp D      &kp F      &kp G                       &kp LEFT  &kp RETURN  &kp RIGHT  &kp H  &kp J                 &kp K   &kp L   &trans  &lgui_nums
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V      &kp B     &kt LEFT_SHIFT              &kp DOWN               &kp N  &kp M                 &trans  &trans  &trans  &bt BT_DISC 4
+                              &kp LCTRL  &kp SPACE  &kp LGUI                                                     &mo 1  &enter_layer 2 ENTER  &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp LC(RIGHT) LC(LEFT)>;
         };
 
+        numbers {
+            display-name = "NUM";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &none   &kp N7  &kp N8  &kp N9  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &none   &kp N4  &kp N5  &kp N6  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &none   &kp N1  &kp N2  &kp N3  &none  &none
+                        &trans  &trans  &trans                                    &trans  &kp N0  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp DOWN UP>;
+        };
+
         navigation {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp HOME  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &none  &none
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &kp INS   &none           &none           &none            &none  &none
-                        &trans  &trans  &trans                                    &trans    &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &none   &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &none   &kp HOME        &kp INS         &kp END          &none  &none
+                        &trans  &trans  &trans                                    &trans  &trans          &trans
             >;
 
             label = "NAV";
@@ -493,18 +496,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &none   &mkp MB1        &mkp MB3        &mkp MB2         &none  &none
                         &trans  &trans  &trans                                    &trans  &trans          &trans
             >;
-        };
-
-        numbers {
-            display-name = "NUM";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &none   &kp N7  &kp N8  &kp N9  &none  &none
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &none   &kp N4  &kp N5  &kp N6  &none  &none
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &none   &kp N1  &kp N2  &kp N3  &none  &none
-                        &trans  &trans  &trans                                    &trans  &kp N0  &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp DOWN UP>;
         };
 
         adjust {
@@ -524,7 +515,7 @@
         compatible = "zmk,conditional-layers";
 
         adjust {
-            if-layers = <3 2>;
+            if-layers = <1 3>;
             then-layer = <4>;
         };
     };
